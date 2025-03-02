@@ -1,52 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'fh1';
-  src: url('./assets/fonts/font1.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'fh2';
-  src: url('./assets/fonts/font2.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-*::selection{
-  background-color: black;
-  color: white;
-}
 body {
-    background-color: black;
-    color: white;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-::-webkit-scrollbar {
-  width: 12px; 
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #ffff;
 }
-
-::-webkit-scrollbar-track {
-  background: #1a1a1a; 
-  border-radius: 10px; 
-}
-
-::-webkit-scrollbar-thumb {
-  background: #6c63ff;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #c084fc;
-}
-
-scrollbar {
-  width: 12px;
-  background: #1a1a1a;
-}
-

@@ -70,20 +70,20 @@ const Map = () => {
   );
 
   return (
-    <div className="flex flex-col md:h-screen lg:my-24 my-12 px-5">
+    <div className="flex flex-col md:h-screen py-10 px-5 bg-gradient-to-r from-purple-950 to-black">
       {/* Header */}
-      <header className="bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-600 text-white py-4 px-6 shadow-lg text-center mb-4">
-        <h1 className="text-2xl font-bold">Explore MANIT Campus</h1>
+      <header className=" text-white py-4 mb-10 px-6 text-center rounded-xl">
+        <h1 className="text-3xl font-bold">Explore MANIT Campus</h1>
       </header>
 
       {/* Content */}
       <div className="flex flex-1 flex-col md:flex-row">
         {/* Sidebar */}
-        <aside className="w-full md:w-1/4 bg-gray-800 text-white p-4 overflow-y-auto">
+        <aside className="w-full md:w-1/4 bg-black text-white p-4 overflow-y-auto rounded-lg">
           <h2 className="text-lg font-semibold mb-4">Locations</h2>
 
           {/* Search Input */}
-          <div className="flex flex-col md:flex-row gap-2">
+          <div className="flex flex-col md:flex-row gap-2 relative">
             <input
               type="text"
               className="w-full p-2 rounded bg-gray-700 text-white"
@@ -97,7 +97,7 @@ const Map = () => {
           </div>
 
           {/* Location List */}
-          <ul className="mt-4">
+          <ul className="mt-4 relative z-20">
             {filteredPlaceNames.length > 0 ? (
               filteredPlaceNames.map((key) => (
                 <li key={key} className="mb-3">

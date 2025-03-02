@@ -54,14 +54,14 @@ const Team = () => {
   }, []);
 
   return (
-    <div className="team-container">
+    <div className="team-container bg-gradient-to-r from-purple-950 to-black overflow-hidden">
       {/* Main Heading */}
       <h1 ref={headingRef} className="team-heading">Meet Our Team</h1>
 
       {/* Third Year Section (Placed Above Second Year) */}
       <section className="third-year-section py-20">
-        <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 shadow text-purple-700 font-bold">Third Year</h1>
-        <div className="team-grid mt-6">
+        <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 text-whitey font-semibold">Third Year</h1>
+        <div className="team-grid mt-6 px-36">
           {TeamDetails.thirdYear.map((member, index) => (
             <div
               key={member.id}
@@ -72,8 +72,8 @@ const Team = () => {
               <div className="circle">  	  
                 <img src={member.profileImage} alt={member.name} className="team-photo" />
               </div>
-              <h2 style={{ fontFamily: 'fh1' }} className="team-name">{member.name}</h2>
-              <p style={{ fontFamily: 'fh2' }} className="team-position">{member.role}</p>
+              <h2 className="team-name">{member.name}</h2>
+              <p className="team-position">{member.role}</p>
 
               {/* Social Media Icons */}
               <div className="social-icons">
@@ -87,8 +87,8 @@ const Team = () => {
 
       {/* Second Year Section */}
       <section className="second-year-section py-40">
-        <h1 ref={secondYearHeadingRef} className="section-heading text-4xl mt-6 text-[#C084FC] font-bold underline">Second Year</h1>
-        <div className="team-grid mt-6">
+      <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 text-whitey font-semibold">Second Year</h1>
+        <div className="team-grid mt-6 px-36">
           {TeamDetails.secondYear.map((member, index) => (
             <div
               key={member.id}
