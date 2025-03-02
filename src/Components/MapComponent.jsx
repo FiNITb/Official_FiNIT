@@ -25,7 +25,7 @@ const MapComponent = ({ lat, lon }) => {
   return (
     <div
       id="map"
-      style={{ width: '100%', height: '100%', minHeight: '300px' }}
+      style={{ width: '100%', height: '100%', minHeight: '300px', borderRadius: '10px' }}
     />
   );
 };

@@ -8,7 +8,7 @@ import ab_img2 from "../../assets/about2.jpg";
 const About = () => {
   
   const headingRef = useRef(null);
-  const sectionRefs = useRef([]);
+  const sectionRefs = useRef([]); 
   useGSAP(() => {
     gsap.from(headingRef.current, {
       opacity: 0,
@@ -39,9 +39,9 @@ const About = () => {
   }, []);
 
   return (
-    <div className="container-about shadow-xl">
+    <div className="container-about bg-gradient-to-r from-purple-950 to-black">
       <div className="about-container overflow-x-hidden">
-        <h1 style={{ fontFamily: "fh1" }} ref={headingRef} className="about-heading mt-3">
+        <h1 ref={headingRef} className="about-heading mt-3">
           About us
         </h1>
       
@@ -51,8 +51,8 @@ const About = () => {
             <img src={ab_img1} alt="About Us" />
           </div>
           <div className="about-text flex flex-col justify-center">
-            <h2 style={{ fontFamily: "fh1" }} className="about-subheading">Our Vision</h2>
-            <p style={{ fontFamily: "fh2" }}>
+            <h2  className="about-subheading">Our Vision</h2>
+            <p >
               Welcome to our world! We are a passionate team dedicated to
               delivering innovative solutions that inspire creativity and empower
               individuals. Our mission is to make an impact through our
@@ -68,8 +68,8 @@ const About = () => {
             <img src={ab_img2} alt="About Us" />
           </div>
           <div className="about-text flex flex-col justify-center">
-            <h2 style={{ fontFamily: "fh1" }} className="about-subheading">Our Mission</h2>
-            <p style={{ fontFamily: "fh2" }}>
+            <h2  className="about-subheading">Our Mission</h2>
+            <p >
               We believe in the power of teamwork and thrive on challenges that
               push us beyond our limits. Our journey is defined by our pursuit of
               excellence, and we constantly strive to exceed expectations, one

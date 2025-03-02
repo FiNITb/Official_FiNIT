@@ -44,7 +44,7 @@ function Header() {
           <Link to="/" className="flex items-center">
             <img
               src={nav_logo}
-              className="object-cover h-14 border border-[#00FFCC] rounded-full"
+              className="object-cover h-14  rounded-full"
               alt="Logo"
             />
           </Link>

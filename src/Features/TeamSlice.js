@@ -6,13 +6,43 @@ export const TeamDetails = {
   secondYear: [
     {
       id: uuidv4(),
+      name: "Yuvraj Singh Gaur",
+      year: "2nd Year",
+      role: "Event Manager",
+      linkedIn: "https://www.linkedin.com/in/gauryuvraj",
+      email: "",
+      instagram: "https://www.instagram.com/yuvrajsinghgaur",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1740831954/WhatsApp_Image_2025-03-01_at_17.51.05_182c6683_kytudf.jpg",
+    },
+    {
+      id: uuidv4(),
+      name: "Ujjwal Kumar",
+      year: "2nd Year",
+      role: "Fintech",
+      linkedIn: "https://www.linkedin.com/in/ujjwal-kumar-8547bb2b5/",
+      email: "ujjwalkr.com@gmail.com",
+      instagram: "https://www.instagram.com/uk.4289?igsh=bGR4aWN0b3V5dTkx",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660118/1735133519974_-_Ujjwal_Kumar_yh6oye.jpg",
+    },
+    {
+      id: uuidv4(),
       name: "Bhavya Ailani",
       year: "2nd Year",
-      role: "Co-Coorinator(Management)",
+      role: "Sponsorship executive",
       linkedIn: "https://www.linkedin.com/in/bhavya-ailani-0540a223b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       email: "bhavyaailani13@gmail.com",
       instagram: "https://www.instagram.com/bhavyaailani_/profilecard/?igsh=MXM1aGdtcXdlOGhmaA==",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660122/IMG_20250104_134917_-_Bhavya_Ailani_xli77b.jpg",
+    },
+    {
+      id: uuidv4(),
+      name: "Shrijee Gupta",
+      year: "2nd Year",
+      role: "Sponsorship executive",
+      linkedIn: "https://www.linkedin.com/in/shrijee-gupta-565768289/",
+      email: "shrijeegupta1703@gmail.com",
+      instagram: "https://www.instagram.com/shrijee_264",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1740739674/IMG_20241009_125550_349_-_shrijee_gupta_dhn5iz.webp",
     },
     
     {
@@ -23,7 +53,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/nikhil-solanki-a7a",
       email: "nikhilsolanki2306@gmail.com",
       instagram: "https://www.instagram.com/_n_i_k_k_23/profilec",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660119/IMG-20250102-WA0005_-_Nikhil_Paras_pjmvvi.jpg",
     },
     {
       id: uuidv4(),
@@ -33,7 +63,7 @@ export const TeamDetails = {
       linkedIn: "https://linkedin.com/in/piyushyadav2307",
       email: "yadavpiyush68144@gmail.com",
       instagram: "https://www.instagram.com/piyush_yadav2307",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660120/IMG_20250102_204636_-_Piyush_Yadav_cwgtqp.jpg",
     },
     
     {
@@ -44,7 +74,7 @@ export const TeamDetails = {
       linkedIn: "https://wwww.linkedin.com/in/rohan-kumar-80862a301ww.linkedin.com/in/",
       email: "rohankk370@gmail.com",
       instagram: "https://www.instagram.com/rohan.kr_3",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660119/IMG-20241108-WA0005_1_-_Rohan_Kumar_d64q24.jpg",
     },
     {
       id: uuidv4(),
@@ -54,7 +84,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/akshat-arora-6a21a4290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       email: "akshatarora241@gmail.com",
       instagram: "https://www.instagram.com/",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660121/IMG_20250102_212426_-_Akshat_Arora_fleoix.jpg",
     },
     {
       id: uuidv4(),
@@ -64,7 +94,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/umang-rathod-8b16062b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       email: "umangrathod7492@gmail.com",
       instagram: "https://www.instagram.com/umannngggg?igsh=a3NzZnQ5eHAwN2Vi",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660121/IMG_20250102_163222_-_UMANG_n2sgib.jpg",
     },
     {
       id: uuidv4(),
@@ -74,7 +104,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/ankit-singh-78152b1b5/",
       email: "ankit132004singh@gmail.com",
       instagram: "https://www.instagram.com/ankit_shekhawat1326",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660118/1708271881166_-_Ankit_Singh_gshwzb.jpg",
     },
 
 
@@ -90,21 +120,21 @@ export const TeamDetails = {
       profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660122/pixelcut-export_-_Anuj_Gour_ovbibc.png",
     },
 
-    //fin
+
     {
       id: uuidv4(),
       name: "Prakhar Dubey",
       year: "2nd Year",
-      role: "FinTech",
+      role: "Sponsorship Executive",
       linkedIn: "https://www.linkedin.com/in/prakhardubey110",
       email: "prakhardubey110@gmail.com",
       instagram: "https://www.instagram.com/prakhar_110",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660122/IMG20241208154904_-_Prakhar_Dubey_p5ochh.jpg",
     },
 
 
 
-// sponsorship
+
     {
       id: uuidv4(),
       name: "Anupam Kumar Tiwari",
@@ -119,11 +149,11 @@ export const TeamDetails = {
       id: uuidv4(),
       name: "Anchal Verma",
       year: "2nd Year",
-      role: "Sponsorship Executive",
+      role: "Event Manager",
       linkedIn: "https://www.linkedin.com/in/anchal-verma-4b5716341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       email: "verma20.09.aashi@gmail.com",
       instagram: "https://www.instagram.com/__aashi__20?igsh=MWhwaXp3YzAzZDRvaQ==",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660119/aaroha_-_Anchal_Verma_k8lprv.jpg",
     },
     {
       id: uuidv4(),
@@ -133,7 +163,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/ayush-meena-953557285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       email: "meenaayushno1@gmail.com",
       instagram: "https://www.instagram.com/ayushmeena_7/profilecard/?igsh=NGdrc2E1Mms2bzRh",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660123/scanner_20221228_154325_-_Ayush_Meena_boy0rt.jpg",
     },
 
 
@@ -145,7 +175,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/ram-kumar999",
       email: "ramkumar18092005@gmail.com",
       instagram: "https://www.instagram.com/Ram_kumar_9525",
-      profileImage: "", 
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660118/1726914369315_-_Ram_Kumar_gvedji.jpg", 
     },
     {
       id: uuidv4(),
@@ -155,7 +185,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/harish-kushwaha-3895a428b/",
       email: "h.kush2005@gmail.com",
       instagram: "https://www.instagram.com/harish.k_ush_05/",
-      profileImage: "",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660120/IMG-20241221-WA0554_-_harish_kushwaha_pqwdgz.jpg",
     },
     {
       id: uuidv4(),
@@ -166,17 +196,6 @@ export const TeamDetails = {
       email: "vaibhavmb97@gmail.com",
       instagram: "https://www.instagram.com/waybhav_07",
       profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660123/IMG_2299_-_Vaibhav_M_vianuc.jpg",
-    },
-    {
-      id: uuidv4(),
-      name: "Ujjwal Kumar",
-      year: "2nd Year",
-
-      role: "Photographer",
-      linkedIn: "https://www.linkedin.com/in/ujjwal-kumar-8547bb2b5/",
-      email: "ujjwalkr.com@gmail.com",
-      instagram: "https://www.instagram.com/uk.4289?igsh=bGR4aWN0b3V5dTkx",
-      profileImage: "",
     },
     
   ],

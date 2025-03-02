@@ -1,116 +1,198 @@
-import React from 'react';
-import './Hero.css';
-import Hero_img from '../../assets/FiNIT_hero.png';
-import { SiBitcoinsv } from 'react-icons/si';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import React, { useRef, useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import Typewriter from "../../Components/typewriteAnimation";
+import side from "../../assets/side.webp";
+import heroImg from "../../assets/Asset 5.png";
+import { TextPlugin } from "gsap/TextPlugin";
 
-function Hero() {
+gsap.registerPlugin(TextPlugin);
+
+const Homepage = () => {
+  const sideImgRef = useRef(null);
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const sloganRef = useRef(null);
+  const buttonRef = useRef(null);
+  const heroImgRef = useRef(null);
+  const glowRef = useRef(null);
+  const [showTypewriter, setShowTypewriter] = useState(false);
+  const [hideTitle, setHideTitle] = useState(false);
+
   useGSAP(() => {
-    const tl = gsap.timeline();
-
-    tl.from('#hero-title-1 h1 .name', {
-      y: '-60%',
-      opacity: 0,
-      stagger: 0.2,
+    const tl = gsap.timeline({
+      defaults: { ease: "power3.out" },
+      onComplete: () => {
+        setHideTitle(true); // Hide "FiNIT"
+        setShowTypewriter(true); // Show Typewriter
+      },
     });
 
-    tl.from('.hero-content > p', {
-      x: '-50%',
-      opacity: 0,
+    const titleElement = titleRef.current;
+    const titleText = "FiNIT";
+    titleElement.innerHTML = ""; // Clear existing content
+
+    const letters = [];
+    [...titleText].forEach((letter, index) => {
+      const span = document.createElement("span");
+      span.textContent = letter;
+      span.style.display = "inline-block";
+      span.style.position = "relative";
+      span.className = `title-letter letter-${index}`;
+      titleElement.appendChild(span);
+      letters.push(span);
     });
 
-    tl.from('.hero-content > .h1', {
-      x: '-50%',
-      opacity: 0,
-    });
+    gsap.set(sideImgRef.current, { opacity: 0, x: -100 });
+    gsap.set(letters, { opacity: 0, y: -50, rotationX: -90 });
+    gsap.set(heroImgRef.current, { opacity: 0, scale: 0.8 });
+    gsap.set(glowRef.current, { opacity: 0, scale: 0.5 });
 
-    tl.from('.hero-image > img', {
-      scale: 0,
-      opacity: 0,
-    });
-
-    tl.eventCallback('onComplete', () => {
-      animateHeroTitle('hero-title-1');
-    });
-
-    function animateHeroTitle(containerId) {
-      const letters = document.querySelectorAll(`#${containerId} .name`);
-
-      letters.forEach((letter) => {
-        letter.style.opacity = '0';
-      });
-
-      gsap.to(`#${containerId} .name`, {
-        opacity: 1,
-        duration: 0.5,
-        stagger: 0.3,
-        ease: 'power2.out',
-        onComplete: () => {
-          document.getElementById(containerId).style.display = 'none';
-          const nextContainer = containerId === 'hero-title-1' ? 'hero-title-2' : 'hero-title-1';
-          document.getElementById(nextContainer).style.display = 'block';
-          animateHeroTitle(nextContainer);
+    tl.to(sideImgRef.current, { opacity: 1, x: 0, duration: 1.2 })
+      .to(
+        letters,
+        {
+          opacity: 1,
+          y: 0,
+          rotationX: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "back.out(1.7)",
         },
-        repeat: 1,
-        yoyo: true,
-      });
-    }
-  });
+        "-=0.8"
+      )
+      .fromTo(
+        [subtitleRef.current, sloganRef.current, buttonRef.current],
+        {
+          opacity: 0,
+          y: 50,
+        },
+        { opacity: 1, y: 0, duration: 0.8, stagger: 0.2 },
+        
+      )
+      .to(glowRef.current, { opacity: 0.5, scale: 1, duration: 1.5 }, "-=0.4")
+      .to(heroImgRef.current, { opacity: 1, scale: 1, duration: 1 }, "-=1.2")
+      .to(
+        letters.reverse(),
+        { opacity: 0, y: 50, duration: 0.8, stagger: 0.15 },
+        "+=1" // Ensuring fade out happens **last**
+      );
+
+    gsap.to(heroImgRef.current, {
+      y: 15,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+
+    // Add subtle pulse to the glow effect
+    gsap.to(glowRef.current, {
+      scale: 1.1,
+      opacity: 0.7,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  }, []);
+
+  // Button hover animation using inline functions
+  const onButtonEnter = () => {
+    gsap.to(buttonRef.current, {
+      scale: 1.1,
+      backgroundColor: "#2c7a7b",
+      boxShadow: "0 0 15px rgba(56, 178, 172, 0.6)",
+      duration: 0.3,
+    });
+  };
+
+  const onButtonLeave = () => {
+    gsap.to(buttonRef.current, {
+      scale: 1,
+      backgroundColor: "#38b2ac",
+      boxShadow: "none",
+      duration: 0.3,
+    });
+  };
 
   return (
     <>
-      <div className="relative">
-      <div className="absolute bg-black opacity-80 z-10 inset-0 min-h-screen"></div>
-      <div className="hero relative bg-cover bg-fixed min-h-screen flex flex-col lg:flex-row justify-center lg:justify-between items-center px-6 md:px-10 lg:px-16 py-20 lg:py-8">
-        {/* Hero Content */}
-        <div className="hero-content relative z-10 text-center lg:text-left max-w-lg lg:max-w-xl">
-          <div id="hero-title-1" className="sm:text-center lg:text-left mb-6">
-            <h1 className="text-white font-bold text-[50px] md:text-[70px] lg:text-[90px] flex justify-center lg:justify-start">
-              <span className="name inline-block">F</span>
-              <span className="name inline-block">i</span>
-              <span className="name inline-block">N</span>
-              <span className="name inline-block">I</span>
-              <span className="name inline-block">T</span>
-            </h1>
+      <img
+        ref={sideImgRef}
+        src={side}
+        alt="Side Design"
+        className="fixed max-w-[200px] md:max-w-[300px]"
+      />
+      <div className="min-h-screen flex items-center justify-center px-6 py-24 sm:py-32 bg-gradient-to-r from-purple-950 to-black overflow-hidden">
+        <div className="max-w-7xl w-full flex flex-col md:flex-row gap-10 items-center text-white z-10">
+          {/* Left Section */}
+          <div className="text-center md:text-left space-y-2">
+            {/* Prevents layout shift */}
+            <div className="min-h-[50px]">
+              {!hideTitle && (
+                <h1
+                  ref={titleRef}
+                  className="font-bold leading-tight font-[Poppins]"
+                  style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
+                >
+                  FiNIT
+                </h1>
+              )}
+              {showTypewriter && <Typewriter />}
+            </div>
+
+            <p
+              ref={subtitleRef}
+              className="font-bold mt-4 mb-3 leading-snug uppercase font-[Poppins]"
+              style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)" }}
+            >
+              <span className="text-teal-500">The Finance Society</span> <br />
+              NIT Bhopal
+            </p>
+
+            <span
+              ref={sloganRef}
+              className="font-semibold py-4 block"
+              style={{ fontSize: "clamp(1rem, 2.5vw, 1.75rem)" }}
+            >
+              where innovation meets{" "}
+              <span className="text-[#9b51e0]">financial literacy</span>.
+            </span>
+
+            <div className="mt-6" ref={buttonRef}>
+              <a
+                ref={buttonRef}
+                href="/FiNIT_Brochure.pdf"
+                download="FiNIT_Brochure.pdf"
+                className="px-6 py-3 bg-teal-500 text-white rounded-full font-semibold transition hover:bg-teal-400 inline-block text-lg sm:text-xl"
+                onMouseEnter={onButtonEnter}
+                onMouseLeave={onButtonLeave}
+              >
+                FiNIT Brochure
+              </a>
+            </div>
           </div>
 
-          <div id="hero-title-2" className="hidden sm:text-center lg:text-left mb-6">
-            <h1 className="text-white font-bold text-[50px] md:text-[70px] lg:text-[90px] flex justify-center lg:justify-start">
-              <span className="name inline-block">₣</span>
-              <span className="name inline-block">1</span>
-              <span className="name inline-block">₦</span>
-              <span className="name inline-block">1</span>
-              <span className="name inline-block">₮</span>
-            </h1>
+          {/* Right Section - Hero Image */}
+          <div className="relative flex justify-center w-full md:w-auto">
+            <div
+              ref={glowRef}
+              className="absolute inset-0 flex justify-center items-center"
+            >
+              <div className="w-[80%] h-[80%] bg-purple-500 blur-3xl opacity-50 rounded-full"></div>
+            </div>
+            <img
+              ref={heroImgRef}
+              src={heroImg}
+              alt="Crypto Illustration"
+              className="relative max-w-full sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] h-auto"
+            />
           </div>
-
-          <p className="text-white text-[24px] md:text-[26px] lg:text-[48px] leading-tight font-bold mt-6 mb-4">
-            <span className="finance" style={{color:"#58f5c2"}}>The Finance Society</span>
-            <br />
-            at <br />
-            NIT{' '}
-            <SiBitcoinsv className="inline text-yellow-500 text-5xl" />
-            hopal
-          </p>
-
-          <span style={{fontFamily:'fh2'}} className="h1 text-white text-[18px] md:text-[22px] lg:text-[26px] font-bold inline-block">
-            where innovation meets <span className="highlight" style={{color:"#874cff"}}>financial literacy</span>.
-          </span>
         </div>
-
-        {/* Hero Image */}
-        <div className="hero-image relative z-10 mt-8 lg:mt-0 magnet ">
-          <img
-            className="w-[250px] md:w-[350px] lg:w-[500px] animate-[beat_5s_ease-in-out_0.2s_infinite_alternate]"
-            src={Hero_img}
-            alt="Hero"
-          />
-        </div>
-      </div>
       </div>
     </>
   );
-}
+};
 
-export default Hero;
+export default Homepage;
