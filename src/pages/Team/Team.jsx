@@ -59,23 +59,23 @@ const Team = () => {
       <h1 ref={headingRef} className="team-heading">Meet Our Team</h1>
 
       {/* Third Year Section (Placed Above Second Year) */}
-      <section className="third-year-section py-20">
-        <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 text-whitey font-semibold">Third Year</h1>
-        <div className="team-grid mt-6 px-36">
-          {TeamDetails.thirdYear.map((member, index) => (
-            <div
-              key={member.id}
-              className="card team-member"
-              ref={(el) => (thirdYearRef.current[index] = el)}
-            >
-              <div className="overlay"></div> 
-              <div className="circle">  	  
-                <img src={member.profileImage} alt={member.name} className="team-photo" />
-              </div>
-              <h2 className="team-name">{member.name}</h2>
-              <p className="team-position">{member.role}</p>
+        <section className="third-year-section py-20">
+          <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 text-whitey font-semibold">Third Year</h1>
+          <div className="team-grid mt-6 px-36 justify-center md:justify-start">
+            {TeamDetails.thirdYear.map((member, index) => (
+          <div
+            key={member.id}
+            className="card team-member"
+            ref={(el) => (thirdYearRef.current[index] = el)}
+          >
+            <div className="overlay"></div> 
+            <div className="circle">  	  
+              <img src={member.profileImage} alt={member.name} className="team-photo" />
+            </div>
+            <h2 className="team-name">{member.name}</h2>
+            <p className="team-position">{member.role}</p>
 
-              {/* Social Media Icons */}
+            {/* Social Media Icons */}
               <div className="social-icons">
                 <a href={member.linkedIn} target='_blank' rel='noopener noreferrer'><FaLinkedin /></a>
                 <a href={member.instagram} target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
@@ -86,9 +86,9 @@ const Team = () => {
       </section>
 
       {/* Second Year Section */}
-      <section className="second-year-section py-40">
+      <section className="second-year-section py-40 ">
       <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 text-whitey font-semibold">Second Year</h1>
-        <div className="team-grid mt-6 px-36">
+        <div className="team-grid mt-6 px-36 justify-center md:justify-start">
           {TeamDetails.secondYear.map((member, index) => (
             <div
               key={member.id}

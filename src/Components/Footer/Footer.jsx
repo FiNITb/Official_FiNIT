@@ -15,7 +15,6 @@ const navigationLinks = [
   { name: "Home", to: "" },
   { name: "About", to: "about" },
   { name: "Events", to: "events" },
-  { name: "Blog", to: "blog" },
   { name: "Contact Us", to: "contact" },
 ];
 
