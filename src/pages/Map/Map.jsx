@@ -79,7 +79,7 @@ const Map = () => {
       {/* Content */}
       <div className="flex flex-1 flex-col md:flex-row">
         {/* Sidebar */}
-        <aside className="w-full md:w-1/4 bg-black text-white p-4 overflow-y-auto rounded-lg">
+        <aside className="w-full md:w-1/4 bg-gradient-to-br from-black to-gray-800 text-white p-4 overflow-y-auto rounded-lg">
           <h2 className="text-lg font-semibold mb-4">Locations</h2>
 
           {/* Search Input */}

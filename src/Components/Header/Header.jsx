@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import nav_logo from '../../assets/nav_logo.jpg';
-import FiNIT_Logo from '../../assets/FiNIT_Logo.jpg';
 import './Header.css';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
-
+//import and register ScrollTrigger
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function Header() {
   
