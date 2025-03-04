@@ -16,7 +16,7 @@ export const EventData = [
     title: "F-INVEST",
     poweredBy: "Zerodha",
     image:
-      "https://media.gettyimages.com/id/1415672333/photo/indian-rupees-cash-banknotes-and-coins-and-stock-market-indicators.jpg?s=612x612&w=0&k=20&c=Gwn2shKC4W_BqQM7oMvvvRgYHcWTQnv_tWtyzhdwNtc=",
+      "https://res.cloudinary.com/dju84uvhd/image/upload/v1741028608/WhatsApp_Image_2025-03-04_at_00.31.14_1468e460_z9exhy.jpg",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   },
