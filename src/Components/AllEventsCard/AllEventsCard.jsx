@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const PremiumImageContainer = ({ title, description, imageUrl }) => {
+const PremiumImageContainer = ({ title, description, image }) => {
     const containerRef = useRef(null);
     const imageRef = useRef(null);
     const captionRef = useRef(null);
@@ -157,9 +157,9 @@ const PremiumImageContainer = ({ title, description, imageUrl }) => {
             {/* Image with GSAP Animation */}
             <img
               ref={imageRef}
-              src={imageUrl || "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-1170x780.jpg"}
+              src={image}
               alt="Premium content"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-fit"
               onError={(e) => { e.target.style.display = "none"; }}
             />
           </div>
