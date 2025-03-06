@@ -5,6 +5,7 @@ import Typewriter from "../../Components/typewriteAnimation";
 import side from "../../assets/side.webp";
 import heroImg from "../../assets/Asset 5.png";
 import { TextPlugin } from "gsap/TextPlugin";
+import Social from '../../Components/Social/Social'
 
 gsap.registerPlugin(TextPlugin);
 
@@ -16,6 +17,7 @@ const Homepage = () => {
   const buttonRef = useRef(null);
   const heroImgRef = useRef(null);
   const glowRef = useRef(null);
+  const socialRef = useRef(null);
   const [showTypewriter, setShowTypewriter] = useState(false);
   const [hideTitle, setHideTitle] = useState(false);
 
@@ -62,7 +64,7 @@ const Homepage = () => {
         "-=0.8"
       )
       .fromTo(
-        [subtitleRef.current, sloganRef.current, buttonRef.current],
+        [subtitleRef.current, sloganRef.current, buttonRef.current, socialRef.current],
         {
           opacity: 0,
           y: 50,
@@ -172,6 +174,11 @@ const Homepage = () => {
               >
                 FiNIT Brochure
               </a>
+            </div>
+            <div
+              ref={socialRef}
+              className="flex justify-center md:justify-start mt-6 space-x-4">
+            <Social/>
             </div>
           </div>
 
