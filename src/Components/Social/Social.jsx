@@ -3,10 +3,10 @@ import { FaYoutube, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const SocialLinks = () => {
   const socialMedia = [
-    { id: 1, icon: <FaYoutube />, link: "https://youtube.com" },
+    { id: 1, icon: <FaYoutube />, link: "" },
     { id: 2, icon: <FaTwitter />, link: "https://twitter.com" },
-    { id: 3, icon: <FaLinkedin />, link: "https://linkedin.com" },
-    { id: 4, icon: <FaInstagram />, link: "https://instagram.com" },
+    { id: 3, icon: <FaLinkedin />, link: "https://www.linkedin.com/company/finit-nit-bhopal" },
+    { id: 4, icon: <FaInstagram />, link: "https://www.instagram.com/finit_nitb/" },
   ];
 
   return (
