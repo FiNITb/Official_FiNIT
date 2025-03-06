@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { selectEvent } from "../../Features/AllEvents";
 
 const EventCard = ({ id, title, poweredBy, image, description }) => {
   const [hover, setHover] = useState(false);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
+  
 
   return (
     <div
@@ -23,13 +22,13 @@ const EventCard = ({ id, title, poweredBy, image, description }) => {
       onMouseLeave={() => setHover(false)}
     >
       <div
-        className={`absolute inset-0 flex flex-col justify-end p-4 bg-white bg-opacity-30 border-2 border-white rounded-lg transition-all duration-500 ease-in-out ${
+        className={`absolute inset-0 flex flex-col justify-end p-4  border-2 border-white rounded-lg transition-all duration-500 ease-in-out ${
           hover ? "translate-y-[-70%]" : "translate-y-0"
         }`}
       >
-        <p className="text-2xl font-bold uppercase text-black">{title}</p>
-        <p className="text-lg">Powered By</p>
-        <p className="text-lg text-black">{poweredBy}</p>
+        <p className="text-xl font-extrabold uppercase text-black px-5 py-2 bg-purple-400 rounded-2xl text-center">{title}</p>
+        {/* <p className="text-lg">Powered By</p>
+        <p className="text-lg text-black">{poweredBy}</p> */}
       </div>
       {hover && (
         <div className="absolute bottom-4 left-4 right-4 bg-white bg-opacity-75 p-4 rounded-lg transition-opacity duration-500 ease-in-out">
@@ -39,9 +38,8 @@ const EventCard = ({ id, title, poweredBy, image, description }) => {
 
           <button
             className="mt-4 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-teal-500 transition-all"
-            onClick={() => {
-              dispatch(selectEvent(title, id));
-              navigate(`${id}`);
+            onClick={() => {            
+              navigate(`${title}`);
               window.scrollTo(0, 0);
             }}
           >

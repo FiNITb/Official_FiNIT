@@ -5,14 +5,14 @@ export const EventData = [
     title: "Wall Street wizards",
     poweredBy: "FiNIT",
     image:
-      "https://media.gettyimages.com/id/1403918089/photo/business-leader-woman.jpg?s=612x612&w=0&k=20&c=h90SfLlof-dxsScM300BJh2x4JS8Esm-cFxnqXJEE4w=",
+      "https://res.cloudinary.com/dju84uvhd/image/upload/v1741296689/IMG_20241020_140717_ylpyue.jpg",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Wall Street Wizards, is an exhilarating challenge designed to test participants’ financial acumen, strategic thinking, and market instincts. This event immerses participants in the fast-paced world of stock markets, investments, and economic decision-making. Through engaging simulations and competitive rounds, participants will analyze market trends, interpret financial data, and make calculated investment decisions. It’s a battle of wit and strategy where only the sharpest minds can emerge as true market wizards. Whether you're a seasoned investor or a beginner eager to learn, Wall Street Wizards offers a hands-on experience to understand real-world financial dynamics. The event is not just about winning—it’s about developing critical thinking, risk management, and decision-making skills in an exciting and interactive environment.",
   },
 
   {
     id: "finvest",
-    title: "F-INVEST 2025 ",
+    title: "F-invest : The Flagship Event of FiNIT",
     poweredBy: "Zerodha",
     image:
       "https://res.cloudinary.com/dju84uvhd/image/upload/v1741028608/WhatsApp_Image_2025-03-04_at_00.31.14_1468e460_z9exhy.jpg",

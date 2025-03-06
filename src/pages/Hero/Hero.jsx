@@ -5,7 +5,7 @@ import Typewriter from "../../Components/typewriteAnimation";
 import side from "../../assets/side.webp";
 import heroImg from "../../assets/Asset 5.png";
 import { TextPlugin } from "gsap/TextPlugin";
-import Social from '../../Components/Social/Social'
+import Social from "../../Components/Social/Social";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -26,7 +26,7 @@ const Homepage = () => {
       defaults: { ease: "power3.out" },
       onComplete: () => {
         setHideTitle(true); // Hide "FiNIT"
-        setShowTypewriter(true); // Show Typewriter 
+        setShowTypewriter(true); // Show Typewriter
       },
     });
 
@@ -64,13 +64,17 @@ const Homepage = () => {
         "-=0.8"
       )
       .fromTo(
-        [subtitleRef.current, sloganRef.current, buttonRef.current, socialRef.current],
+        [
+          subtitleRef.current,
+          sloganRef.current,
+          buttonRef.current,
+          socialRef.current,
+        ],
         {
           opacity: 0,
           y: 50,
         },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.2 },
-        
+        { opacity: 1, y: 0, duration: 0.8, stagger: 0.2 }
       )
       .to(glowRef.current, { opacity: 0.5, scale: 1, duration: 1.5 }, "-=0.4")
       .to(heroImgRef.current, { opacity: 1, scale: 1, duration: 1 }, "-=1.2")
@@ -99,24 +103,28 @@ const Homepage = () => {
     });
   }, []);
 
-  // Button hover animation using inline functions
-  const onButtonEnter = () => {
-    gsap.to(buttonRef.current, {
-      scale: 1.05,
-      backgroundColor: "#2c7a7b",
-      boxShadow: "0 0 15px rgba(56, 178, 172, 0.6)",
-      duration: 0.3,
-    });
-  };
+ // Button hover animation with refined effects
+const onButtonEnter = () => {
+  gsap.to(buttonRef.current, {
+    scale: 1.03,
+    backgroundColor: "#2c7a7b",
+    boxShadow: "0 4px 12px rgba(56, 178, 172, 0.4)",
+    y: -2,
+    duration: 0.25,
+    ease: "power2.out"
+  });
+};
 
-  const onButtonLeave = () => {
-    gsap.to(buttonRef.current, {
-      scale: 1,
-      backgroundColor: "#38b2ac",
-      boxShadow: "none",
-      duration: 0.3,
-    });
-  };
+const onButtonLeave = () => {
+  gsap.to(buttonRef.current, {
+    scale: 1,
+    backgroundColor: "#38b2ac",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    y: 0,
+    duration: 0.25,
+    ease: "power2.in"
+  });
+};
 
   return (
     <>
@@ -131,14 +139,13 @@ const Homepage = () => {
           {/* Left Section */}
           <div className="text-center md:text-left space-y-2">
             {/* Prevents layout shift */}
-            <div >
+            <div>
               {!hideTitle && (
                 <h1
                   ref={titleRef}
                   className="font-bold leading-tight font-[Poppins]"
                   style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
-                >
-                </h1>
+                ></h1>
               )}
               {showTypewriter && <Typewriter />}
             </div>
@@ -161,24 +168,41 @@ const Homepage = () => {
               <span className="text-[#9b51e0]">financial literacy</span>.
             </span>
 
-            <div className="mt-6 inline-block rounded-full" ref={buttonRef}
-            onMouseEnter={onButtonEnter}
-            onMouseLeave={onButtonLeave}
+            <div
+              className="mt-4 inline-block rounded-full overflow-hidden"
+              ref={buttonRef}
+              onMouseEnter={onButtonEnter}
+              onMouseLeave={onButtonLeave}
             >
               <a
-                ref={buttonRef}
                 href="https://drive.google.com/file/d/159i3b8A5cAjXDjd-s07HZ0K4pJ3QQf1W/view?usp=sharing"
                 download="FiNIT_Brochure.pdf"
-                className="px-6 py-3 bg-teal-500 text-white rounded-full font-semibold transition hover:bg-teal-400 inline-block text-lg sm:text-xl"
+                className="px-4 py-2 sm:px-5 sm:py-2.5 bg-teal-500 text-white rounded-full font-medium text-sm sm:text-base transition-all duration-300 hover:bg-teal-400 hover:shadow-md inline-flex items-center gap-1.5"
                 target="_blank"
+                rel="noopener noreferrer"
               >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 sm:h-5 sm:w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
                 FiNIT Brochure
               </a>
             </div>
             <div
               ref={socialRef}
-              className="flex justify-center md:justify-start mt-6 space-x-4">
-            <Social/>
+              className="flex justify-center md:justify-start mt-6 space-x-4"
+            >
+              <Social />
             </div>
           </div>
 

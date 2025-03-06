@@ -145,8 +145,8 @@ const EventsCard = ({id, title, description, image }) => {
 
 
   return (
-    <div className="max-w-2xl mx-auto my-12 px-4 cursor-pointer">
-      <Link to={`/events/${id}`}>
+    <div className="max-w-2xl min-w-3xl mx-auto my-12 px-4 cursor-pointer">
+      <Link to={`/events/${id}`} onClick={() => window.scrollTo(0, 0)}>
       <div
         ref={containerRef}
         className="relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-black to-gray-900 p-1 transition-all h-full"
@@ -161,7 +161,7 @@ const EventsCard = ({id, title, description, image }) => {
           <div className="absolute bottom-0 left-0 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl transform -translate-x-10 translate-y-10"></div>
 
           {/* Image Container */}
-          <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-lg w-full flex-grow bg-gray-800">
+          <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-lg w-full flex-grow bg-gray-800 h-96">
             {/* Placeholder Icon */}
             <div className="absolute inset-0 flex items-center justify-center text-gray-500 transition-opacity duration-500"></div>
 
@@ -185,7 +185,7 @@ const EventsCard = ({id, title, description, image }) => {
             <h3 className="text-lg font-semibold text-teal-400 truncate">
               {title || "Premium Content"}
             </h3>
-            <p className="text-sm text-gray-300 mt-1 line-clamp-3">
+            <p className="text-sm text-gray-300 mt-1 line-clamp-4">
               {description ||
                 "High-quality premium content with elegant styling."}
             </p>
