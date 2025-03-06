@@ -11,7 +11,7 @@ const Home_Layout = () => {
     <>
     <Hero/>
     <About/>
-    <Events isHomePage={true}/>
+    <Events/>
     <Gallery/>
     <Map/>
     <Sponsors/>

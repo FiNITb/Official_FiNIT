@@ -40,13 +40,39 @@ const Team = () => {
       if (el) {
         gsap.fromTo(
           el,
-          { opacity: 0, y: 50 },
+          { opacity: 0, y: 50, scale: 0.8 },
           {
             opacity: 1,
             y: 0,
-            duration: 1.5,
-            ease: 'power3.out',
-            stagger:1
+            scale: 1,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      }
+    });
+
+    secondYearRef.current.forEach((el) => {
+      if (el) {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 50, scale: 0.8 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
           }
         );
       }
@@ -87,7 +113,7 @@ const Team = () => {
 
       {/* Second Year Section */}
       <section className="second-year-section py-40 ">
-      <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 text-whitey font-semibold">Second Year</h1>
+      <h1 ref={secondYearHeadingRef} className="section-heading text-5xl pb-10 text-whitey font-semibold">Second Year</h1>
         <div className="team-grid mt-6 px-36 justify-center md:justify-start">
           {TeamDetails.secondYear.map((member, index) => (
             <div

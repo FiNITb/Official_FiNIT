@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { EventData } from "../../Features/EventSlice";
-import AllEventsCard from "../../Components/AllEventsCard/AllEventsCard"
+import { EventData } from "../../Features/Event";
+import EventsCard from "../../Components/EventsCard/EventsCard"
 const Events = ({}) => {
 
   return (
@@ -15,7 +15,7 @@ const Events = ({}) => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 place-items-center">
         {EventData.map((event, index) => (
           <div key={event.id}>
-            <AllEventsCard 
+            <EventsCard 
               id={event.id}
               title={event.title}
               poweredBy={event.poweredBy}
