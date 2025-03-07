@@ -93,7 +93,7 @@ function Header() {
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-12 lg:mt-0 bg-gray-800 lg:bg-transparent">
               {navLinks.map(({ to, label }) => (
-                <li key={to}>
+                <li style={{fontFamily:'fh1'}} key={to}>
                   <NavLink
                     
                     to={to}

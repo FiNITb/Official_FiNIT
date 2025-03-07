@@ -60,7 +60,7 @@ const Sponsors = () => {
               alt={sponsor.name}
               className="w-full h-48 object-contain mb-4 rounded-lg mix-blend-multiply"
             />
-            <h2 className="text-xl font-semibold text-black">{sponsor.name}</h2>
+            <h2 style={{fontFamily:'fh1'}} className="text-xl font-semibold text-black">{sponsor.name}</h2>
           </div>
         ))}
       </div>

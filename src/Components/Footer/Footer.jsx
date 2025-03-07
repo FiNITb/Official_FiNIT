@@ -35,7 +35,7 @@ const Footer = () => {
             <p className="mb-4">FiNIT - The Finance Society</p>
             <div className="flex space-x-4">
               {socialMediaLinks.map((social, index) => (
-                <a key={index} href={social.url} target='_blank' className="hover:text-teal-300 transition-transform transform hover:scale-110">
+                <a style={{fontFamily:'fh2'}} key={index} href={social.url} target='_blank' className="hover:text-teal-300 transition-transform transform hover:scale-110">
                   {social.icon}
                 </a>
               ))}
