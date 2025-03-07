@@ -7,6 +7,7 @@ const EventsCard = ({id, title, description, image }) => {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
   const captionRef = useRef(null);
+  const ctaButtonRef = useRef(null);
 
   useGSAP(() => {
     const ctx = gsap.context(() => {
@@ -44,6 +45,15 @@ const EventsCard = ({id, title, description, image }) => {
           ease: "sine.inOut",
         });
 
+      // Animate the CTA button constantly to draw attention
+      gsap.to(ctaButtonRef.current, {
+        scale: 1.05,
+        duration: 1.2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
       // Main hover animation
       const hoverTl = gsap.timeline({ paused: true });
 
@@ -79,6 +89,17 @@ const EventsCard = ({id, title, description, image }) => {
             ease: "power3.out",
           },
           0.1
+        )
+        .to(
+          ctaButtonRef.current,
+          {
+            scale: 1.15,
+            backgroundColor: "rgba(94, 234, 212, 0.8)",
+            boxShadow: "0px 0px 15px rgba(94, 234, 212, 0.6)",
+            duration: 0.3,
+            ease: "power3.out",
+          },
+          0
         );
 
       // Mouse tracking function
@@ -162,8 +183,15 @@ const EventsCard = ({id, title, description, image }) => {
 
           {/* Image Container */}
           <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-lg w-full flex-grow bg-gray-800 h-96">
-            {/* Placeholder Icon */}
-            <div className="absolute inset-0 flex items-center justify-center text-gray-500 transition-opacity duration-500"></div>
+            {/* Clickable Overlay Icon */}
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+              <div className="text-white text-4xl">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+            </div>
 
             {/* Image with GSAP Animation */}
             <img
@@ -180,15 +208,26 @@ const EventsCard = ({id, title, description, image }) => {
           {/* Caption with Glassmorphism Effect */}
           <div
             ref={captionRef}
-            className="mt-4 text-white transition-all duration-500 h-32"
+            className="mt-4 text-white transition-all duration-500"
           >
             <h3 className="text-lg font-semibold text-teal-400 truncate">
               {title || "Premium Content"}
             </h3>
-            <p className="text-sm text-gray-300 mt-1 line-clamp-4">
+            <p className="text-sm text-gray-300 mt-1 line-clamp-3">
               {description ||
                 "High-quality premium content with elegant styling."}
             </p>
+            
+            {/* Call to Action Button */}
+            <div 
+              ref={ctaButtonRef}
+              className="flex items-center justify-center mt-4 bg-teal-500/40 backdrop-blur-sm text-white py-2 px-4 rounded-lg transition-all duration-300 border border-teal-500/30"
+            >
+              <span className="font-medium">View Details</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
