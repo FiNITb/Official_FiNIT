@@ -3,7 +3,7 @@ import gsap from "gsap";
 import "./About.css";
 import { useGSAP } from "@gsap/react";
 import ab_img1 from "../../assets/manitTomb.jpg";
-import ab_img2 from "../../assets/about2.jpg";
+import ab_img2 from "../../assets/about3.png"
 
 const About = () => {
   const headingRef = useRef(null);
@@ -46,7 +46,7 @@ const About = () => {
         {/* First Section */}
         <div
           ref={(el) => (sectionRefs.current[0] = el)}
-          className="about-section mt-5"
+          className="about-section mt-5 gap-5"
         >
           <div className="about-image">
             <img src={ab_img1} alt="About Us" />
@@ -69,7 +69,7 @@ const About = () => {
         {/* Second Section */}
         <div
           ref={(el) => (sectionRefs.current[1] = el)}
-          className="about-section"
+          className="about-section gap-5"
         >
           <div className="about-image">
             <img src={ab_img2} alt="About Us" />
