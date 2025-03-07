@@ -32,8 +32,11 @@ const EventCard = ({ id, title, poweredBy, image, description }) => {
       </div>
       {hover && (
         <div className="absolute bottom-4 left-4 right-4 bg-white bg-opacity-75 p-4 rounded-lg transition-opacity duration-500 ease-in-out">
-          <p className="text-sm text-gray-700 overflow-hidden line-clamp-2">
-            {description}
+          <p className="text-sm text-gray-700 overflow-hidden line-clamp-2"
+            dangerouslySetInnerHTML={{
+              __html: description || "No description available.",
+            }}
+          >
           </p>
 
           <button
