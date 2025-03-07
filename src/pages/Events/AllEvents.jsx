@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { AllEventData } from "../../Features/AllEvents"; // Import your event data
-import EventCard from "../../components/EventCard/EventCard"; // Import your card component
+import { AllEventData } from "../../Features/AllEvents"; 
+import EventCard from "../../components/EventCard/EventCard"; 
 
 const AllEvents = () => {
-  const { title } = useParams(); // Get event name from the URL
+  const { title } = useParams(); 
 
   // Fetch events based on the event name
   const eventList = AllEventData[title] || [];
