@@ -208,7 +208,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/ayush-gautam-15731",
       email: "ayushgautam5v@gmail.com",
       instagram: "https://www.instagram.com/",
-      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660478/IMG-20241213-WA0007_-_Ayush_Gautam_na9nuf.jpg",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1741343466/WhatsApp_Image_2025-02-11_at_19.11.44_fac38c6c_wcv93m.jpg",
     },
     {
       id: uuidv4(),
@@ -258,7 +258,7 @@ export const TeamDetails = {
       linkedIn: "https://www.linkedin.com/in/dileep-bhargav89/",
       email: "dileepbhargav722@gmail.com",
       instagram: "https://www.instagram.com/dileepbz._/profilecard/?igsh=Ync2eDB4bXBxeTJ2",
-      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660481/WhatsApp_Image_2025-01-22_at_14.26.12_2400b348_-_Dileep_Bhargav_xh3z86.jpg",
+      profileImage: "https://res.cloudinary.com/dju84uvhd/image/upload/v1741343584/WhatsApp_Image_2025-01-22_at_14.26.12_2400b348_-_Dileep_Bhargav_xh3z86.jpg",
     },
     {
       id: uuidv4(),

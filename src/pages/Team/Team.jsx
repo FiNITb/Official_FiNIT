@@ -86,7 +86,7 @@ const Team = () => {
 
       {/* Third Year Section (Placed Above Second Year) */}
         <section className="third-year-section py-20">
-          <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 text-whitey font-semibold">Third Year</h1>
+          <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 text-whitey font-semibold">Core Team</h1>
           <div className="team-grid mt-6 px-36 justify-center md:justify-start">
             {TeamDetails.thirdYear.map((member, index) => (
           <div

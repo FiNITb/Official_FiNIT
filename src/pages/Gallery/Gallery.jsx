@@ -11,7 +11,7 @@ function CarouselGames() {
     return (
         <section className='bg-black py-20 px-4 lg:px-20 flex flex-col justify-start gap-12 bg-gradient-to-r from-purple-950 to-black'>
             <div className='text-center text-3xl lg:text-5xl font-bold'>
-                <h2 className='text-[#00ffcc]'>Glimpse: Wealth of Wizard 2K24</h2>
+                <h2 className='text-[#00ffcc]'>Glimpse: <br /><span>Gallery of Wall Street wizards-24</span></h2>
             </div>
             <Splide
                 options={{
