@@ -8,11 +8,14 @@ import ab_img2 from "../../assets/about3.png"
 const About = () => {
   const headingRef = useRef(null);
   const sectionRefs = useRef([]);
+  const textRefs = useRef([]);
+  const imageRefs = useRef([]);
+
   useGSAP(() => {
+    // Heading animation
     gsap.from(headingRef.current, {
       opacity: 0,
       y: -50,
-      delay: 0.5,
       duration: 1,
       ease: "power3.out",
       scrollTrigger: {
@@ -21,18 +24,29 @@ const About = () => {
       },
     });
 
+    // Create a timeline for each section for more control
     sectionRefs.current.forEach((section, index) => {
-      gsap.from(section, {
-        opacity: 0,
-        x: 500,
-        delay: 0.5,
-        duration: 1,
-        ease: "power3.out",
+      const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top 80%",
-        },
+          start: "top 75%",
+        }
       });
+
+      // Stagger the text and image animations for smoother effect
+      timeline
+        .from(imageRefs.current[index], {
+          opacity: 0,
+          x: index % 2 === 0 ? -100 : 100, // Alternate direction
+          duration: 1.2,
+          ease: "power2.out"
+        })
+        .from(textRefs.current[index], {
+          opacity: 0,
+          x: index % 2 === 0 ? 100 : -100, // Opposite direction to image
+          duration: 1.2,
+          ease: "power2.out"
+        }, "-=0.8"); // Start text animation before image animation completes
     });
   }, []);
 
@@ -48,10 +62,10 @@ const About = () => {
           ref={(el) => (sectionRefs.current[0] = el)}
           className="about-section mt-5 gap-5"
         >
-          <div className="about-image">
+          <div className="about-image" ref={(el) => (imageRefs.current[0] = el)}>
             <img src={ab_img1} alt="About Us" />
           </div>
-          <div className="about-text flex flex-col justify-center">
+          <div className="about-text flex flex-col justify-center" ref={(el) => (textRefs.current[0] = el)}>
             <h2 className="about-subheading">Our Vision</h2>
             <p>
               Our vision is to cultivate a financially empowered generation by
@@ -71,10 +85,10 @@ const About = () => {
           ref={(el) => (sectionRefs.current[1] = el)}
           className="about-section gap-5"
         >
-          <div className="about-image">
+          <div className="about-image" ref={(el) => (imageRefs.current[1] = el)}>
             <img src={ab_img2} alt="About Us" />
           </div>
-          <div className="about-text flex flex-col justify-center">
+          <div className="about-text flex flex-col justify-center" ref={(el) => (textRefs.current[1] = el)}>
             <h2 className="about-subheading">Our Mission</h2>
             <p>
               Our mission is to empower students with practical financial
