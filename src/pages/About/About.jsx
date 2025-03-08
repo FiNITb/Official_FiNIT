@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./About.css";
 import { useGSAP } from "@gsap/react";
-import ab_img1 from "../../assets/manitTomb.jpg";
+import ab_img1 from "../../assets/about_us_manit.avif";
 import ab_img2 from "../../assets/about3.png"
 
 const About = () => {
