@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
@@ -8,8 +8,28 @@ const EventsCard = ({id, title, description, image }) => {
   const imageRef = useRef(null);
   const captionRef = useRef(null);
   const ctaButtonRef = useRef(null);
+  const overlayRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if the device is mobile (screen width less than 768px)
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add resize listener
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
 
   useGSAP(() => {
+    if (isMobile) return; // Don't apply GSAP animations on mobile devices
+    
     const ctx = gsap.context(() => {
       gsap.set(containerRef.current, {
         transformPerspective: 1000,
@@ -78,6 +98,15 @@ const EventsCard = ({id, title, description, image }) => {
           0
         )
         .to(
+          overlayRef.current,
+          {
+            opacity: 0.7,
+            duration: 0.3,
+            ease: "power2.out",
+          },
+          0
+        )
+        .to(
           captionRef.current,
           {
             y: -15,
@@ -138,6 +167,7 @@ const EventsCard = ({id, title, description, image }) => {
 
       // Event listeners
       containerRef.current.addEventListener("mouseenter", () => {
+        if (isMobile) return;
         isHovering = true;
         ambientTl.pause();
         hoverTl.play();
@@ -146,6 +176,7 @@ const EventsCard = ({id, title, description, image }) => {
       });
 
       containerRef.current.addEventListener("mouseleave", () => {
+        if (isMobile) return;
         isHovering = false;
         hoverTl.reverse();
         document.removeEventListener("mousemove", trackMouse);
@@ -162,16 +193,16 @@ const EventsCard = ({id, title, description, image }) => {
     });
 
     return () => ctx.revert(); // Cleanup GSAP context
-  }, []);
+  }, [isMobile]);
 
 
   return (
-    <div className="max-w-2xl min-w-3xl mx-auto my-12 px-4 cursor-pointer">
+    <div className="w-full sm:max-w-sm md:max-w-md lg:max-w-xl mx-auto my-6 px-4 cursor-pointer">
       <Link to={`/events/${id}`} onClick={() => window.scrollTo(0, 0)}>
       <div
         ref={containerRef}
-        className="relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-black to-gray-900 p-1 transition-all h-full"
-        style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
+        className={`relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-black to-gray-900 p-1 transition-all h-full ${!isMobile ? "transform-gpu" : ""}`}
+        style={!isMobile ? { perspective: "1000px", transformStyle: "preserve-3d" } : {}}
       >
         {/* Animated Gradient Border */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-teal-500/20 opacity-50 blur-xl"></div>
@@ -182,11 +213,14 @@ const EventsCard = ({id, title, description, image }) => {
           <div className="absolute bottom-0 left-0 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl transform -translate-x-10 translate-y-10"></div>
 
           {/* Image Container */}
-          <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-lg w-full flex-grow bg-gray-800 h-96">
-            {/* Clickable Overlay Icon */}
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+          <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-lg w-full flex-grow bg-gray-800 h-48 sm:h-64 md:h-72 lg:h-80">
+            {/* Clickable Overlay Icon - Now controlled by GSAP on desktop, static on mobile */}
+            <div 
+              ref={overlayRef}
+              className={`absolute inset-0 bg-black/30 flex items-center justify-center z-10 ${isMobile ? "opacity-0 hover:opacity-70" : "opacity-0"} transition-opacity duration-300`}
+            >
               <div className="text-white text-4xl">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 sm:h-16 sm:w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
@@ -197,7 +231,7 @@ const EventsCard = ({id, title, description, image }) => {
             <img
               ref={imageRef}
               src={image}
-              alt="Premium content"
+              alt={title || "Event image"}
               className="w-full h-full object-cover"
               onError={(e) => {
                 e.target.style.display = "none";
@@ -208,7 +242,7 @@ const EventsCard = ({id, title, description, image }) => {
           {/* Caption with Glassmorphism Effect */}
           <div
             ref={captionRef}
-            className="mt-4 text-white transition-all duration-500"
+            className={`mt-4 text-white transition-all duration-500 ${isMobile ? "" : ""}`}
           >
             <h3 className="text-lg font-semibold text-teal-400 truncate">
               {title || "Premium Content"}
@@ -221,7 +255,7 @@ const EventsCard = ({id, title, description, image }) => {
             {/* Call to Action Button */}
             <div 
               ref={ctaButtonRef}
-              className="flex items-center justify-center mt-4 bg-teal-500/40 backdrop-blur-sm text-white py-2 px-4 rounded-lg transition-all duration-300 border border-teal-500/30"
+              className={`flex items-center justify-center mt-4 bg-teal-500/40 backdrop-blur-sm text-white py-2 px-4 rounded-lg transition-all duration-300 border border-teal-500/30 ${isMobile ? "hover:bg-teal-500/60" : ""}`}
             >
               <span className="font-medium">View Details</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
