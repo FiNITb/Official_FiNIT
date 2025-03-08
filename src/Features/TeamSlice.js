@@ -28,6 +28,43 @@ export const TeamDetails = {
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660122/pixelcut-export_-_Anuj_Gour_ovbibc.png",
     },
 
+    //Social Media Manager
+    {
+      id: uuidv4(),
+      name: "Ayush Kumar Yadav",
+      year: "2nd Year",
+      role: "Social Media Manager",
+      linkedIn: "https://www.linkedin.com/in/ayush-yadav-481129246?",
+      email: "",
+      instagram: "https://www.instagram.com/ayush_yadav_54321",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741451587/WhatsApp_Image_2025-03-08_at_20.45.56_421eb271_nt6in4.jpg",
+    },
+
+     // Web Developers
+     {
+      id: uuidv4(),
+      name: "Ram Kumar",
+      year: "2nd Year",
+      role: "Web Developer",
+      linkedIn: "https://www.linkedin.com/in/ram-kumar999",
+      email: "ramkumar18092005@gmail.com",
+      instagram: "https://www.instagram.com/Ram_kumar_9525",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741451919/WhatsApp_Image_2025-03-08_at_22.07.43_58e54f89_mnfmoq.jpg",
+    },
+    {
+      id: uuidv4(),
+      name: "Harish Kushwaha",
+      year: "2nd Year",
+      role: "Web Developer",
+      linkedIn: "https://www.linkedin.com/in/harish-kushwaha-3895a428b/",
+      email: "h.kush2005@gmail.com",
+      instagram: "https://www.instagram.com/harish.k_ush_05/",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660120/IMG-20241221-WA0554_-_harish_kushwaha_pqwdgz.jpg",
+    },
+
     // Event Managers
     {
       id: uuidv4(),
@@ -124,29 +161,7 @@ export const TeamDetails = {
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741436859/IMG_20250207_202725_096_fda2oi.webp",
     },
     
-    // Web Developers
-    {
-      id: uuidv4(),
-      name: "Ram Kumar",
-      year: "2nd Year",
-      role: "Web Developer",
-      linkedIn: "https://www.linkedin.com/in/ram-kumar999",
-      email: "ramkumar18092005@gmail.com",
-      instagram: "https://www.instagram.com/Ram_kumar_9525",
-      profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660118/1726914369315_-_Ram_Kumar_gvedji.jpg",
-    },
-    {
-      id: uuidv4(),
-      name: "Harish Kushwaha",
-      year: "2nd Year",
-      role: "Web Developer",
-      linkedIn: "https://www.linkedin.com/in/harish-kushwaha-3895a428b/",
-      email: "h.kush2005@gmail.com",
-      instagram: "https://www.instagram.com/harish.k_ush_05/",
-      profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660120/IMG-20241221-WA0554_-_harish_kushwaha_pqwdgz.jpg",
-    },
+   
     
     // Sponsorship Executives
     {
@@ -205,7 +220,7 @@ export const TeamDetails = {
       email: "abhishekbalodiya456@gmail.com",
       instagram: "https://www.instagram.com/abhishek_balodiya",
       profileImage:
-        "",
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741449974/WhatsApp_Image_2025-03-08_at_20.03.53_88fbf4cd_xwqvpn.jpg",
     },
     
     // Designer

@@ -76,12 +76,12 @@ const Homepage = () => {
         },
         { opacity: 1, y: 0, duration: 0.8, stagger: 0.2 }
       )
-      // .to(glowRef.current, { opacity: 0.5, scale: 1, duration: 1.5 }, "-=0.4")
+      .to(glowRef.current, { opacity: 0.5, scale: 1, duration: .7 }, "-=0.4")
       .to(heroImgRef.current, { opacity: 1, scale: 1, duration: 1 }, "-=1.2")
       .to(
         letters.reverse(),
         { opacity: 0, y: 50, duration: 0.8, stagger: 0.15 },
-        "+=1" // Ensuring fade out happens **last**
+        "+=0.4" // Ensuring fade out happens **last**
       );
 
     gsap.to(heroImgRef.current, {

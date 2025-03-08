@@ -19,8 +19,8 @@ const navigationLinks = [
 ];
 
 const contactInfo = [
-  { name: "Shriyansh Chourasiya", phone: "+91 12345 67890" },
-  { name: "Ayush Gautam", phone: "+91 98765 43210" },
+  { name: "Shriyansh Chourasiya", phone: "+91 79095 40155" },
+  { name: "Ayush Gautam", phone: "+91 6398 632 136" },
 ];
 
 const Footer = () => {
@@ -68,9 +68,10 @@ const Footer = () => {
 
           {/* College Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Our College</h3>
-            <p>National Institute of Technology, Bhopal</p>
-            <p>Address: NIT Road, Bhopal, MP, India</p>
+            <h3 className="text-xl font-bold mb-4">Locate Us</h3>
+            <p>Maulana Azad National Institute of Technology, Bhopal</p>
+            <p>MANIT square, Near Mata Mandir</p>
+            <p>PIN:462003</p>
           </div>
 
         </div>
