@@ -259,7 +259,7 @@ export const TeamDetails = {
       role: "Mentor",
       linkedIn: "https://www.linkedin.com/in/",
       email: "ankita.tyagi05@gmail.com",
-      instagram: "whoankitatyagi",
+      instagram: "https://instagram.com/whoankitatyagi",
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741433401/Snapchat-229452271_-_Ankita_Tyagi_jem1ha.jpg",
     },
@@ -269,7 +269,7 @@ export const TeamDetails = {
       year: "3rd Year",
       role: "Mentor",
       linkedIn:
-        "https://www.linkedin.com/in/rohit-soni-aab7512b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        "https://www.linkedin.com/in/rohit-soni-aab7512b0",
       email: "rohitsoniofficial2001@gmail.com",
       instagram:
         "https://www.instagram.com/rohit_soni_official2001?igsh=MXVhcWR0MHJtYXltNw%3D%3D&utm_source=qr",
@@ -316,7 +316,7 @@ export const TeamDetails = {
       role: "General Secretary",
       linkedIn: "https://www.linkedin.com/in/prachi-agarwal-158bbb24b",
       email: "agarwalprachi026@gmail.com",
-      instagram: "ag_prachi_",
+      instagram: "https://www.instagram.com/ag_prachi_",
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741433391/IMG-20250118-WA0049_-_Prachi_Agarwal_mtycv1.jpg",
     },
@@ -327,7 +327,7 @@ export const TeamDetails = {
       role: "Event Management Head",
       linkedIn: "https://www.linkedin.com/in/pragati-singh-520888250",
       email: "singhpragati041@gmail.com",
-      instagram: "_sinpragati_",
+      instagram: "https://www.instagram.com/_sinpragati_",
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741433391/IMG-20231125-WA0055_-_Pragati_Singh_llhrna.jpg",
     },

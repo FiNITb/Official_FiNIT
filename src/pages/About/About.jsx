@@ -29,7 +29,7 @@ const About = () => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top 75%",
+          start: "top 80%",
         }
       });
 
