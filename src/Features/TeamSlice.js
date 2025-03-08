@@ -195,6 +195,18 @@ export const TeamDetails = {
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660122/Photoroom-20241026_151614_-_Anupam_Kumar_Tiwari_rptord.png",
     },
+    // Content Writer
+    {
+      id: uuidv4(),
+      name: "Abhishek Balodiya",
+      year: "2nd Year",
+      role: "Content Writer",
+      linkedIn: "https://www.linkedin.com/in/anupam-kumar-tiwari",
+      email: "abhishekbalodiya456@gmail.com",
+      instagram: "https://www.instagram.com/abhishek_balodiya",
+      profileImage:
+        "",
+    },
     
     // Designer
     {
@@ -210,29 +222,6 @@ export const TeamDetails = {
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660119/IMG-20241108-WA0005_1_-_Rohan_Kumar_d64q24.jpg",
     },
     
-    // Fintech
-    {
-      id: uuidv4(),
-      name: "Ujjwal Kumar",
-      year: "2nd Year",
-      role: "Fintech",
-      linkedIn: "https://www.linkedin.com/in/ujjwal-kumar-8547bb2b5/",
-      email: "ujjwalkr.com@gmail.com",
-      instagram: "https://www.instagram.com/uk.4289?igsh=bGR4aWN0b3V5dTkx",
-      profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660118/1735133519974_-_Ujjwal_Kumar_yh6oye.jpg",
-    },
-    {
-      id: uuidv4(),
-      name: "Anuj Gour",
-      year: "2nd Year",
-      role: "FinTech",
-      linkedIn: "https://www.linkedin.com/in/anuj-gour-13198a28a",
-      email: "anujgour0124@gmail.com",
-      instagram: "https://www.instagram.com/anujgour_27/profilec",
-      profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660122/pixelcut-export_-_Anuj_Gour_ovbibc.png",
-    },
     
     // Photographer
     {

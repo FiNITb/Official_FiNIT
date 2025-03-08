@@ -34,7 +34,7 @@ function Header() {
     { to: '/about', label: 'About' },
     { to: '/team', label: 'Team' },
     { to: '/events', label: 'Events' },
-    { to: '/contact', label: 'Contact US' },
+    { to: '/contact', label: 'Contact Us' },
   ];
 
   return (

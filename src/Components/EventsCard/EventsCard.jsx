@@ -192,7 +192,7 @@ const EventsCard = ({id, title, description, image }) => {
       });
     });
 
-    return () => ctx.revert(); // Cleanup GSAP context
+    return () => ctx.revert(); 
   }, [isMobile]);
 
 
