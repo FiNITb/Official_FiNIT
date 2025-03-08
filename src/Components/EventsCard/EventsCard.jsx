@@ -231,6 +231,7 @@ const EventsCard = ({id, title, description, image }) => {
             <img
               ref={imageRef}
               src={image}
+              loading="lazy"
               alt={title || "Event image"}
               className="w-full h-full object-cover"
               onError={(e) => {

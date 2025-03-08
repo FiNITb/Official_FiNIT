@@ -45,6 +45,7 @@ function Header() {
           <Link to="/" className="flex items-center">
             <img
               src={nav_logo}
+              loading='lazy'
               className="object-cover h-14  rounded-full"
               alt="Logo"
             />

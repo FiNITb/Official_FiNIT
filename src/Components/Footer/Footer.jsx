@@ -31,7 +31,7 @@ const Footer = () => {
           
           {/* Website Logo and Social Media */}
           <div className="flex flex-col items-start">
-            <img src={logo} alt="FiNIT Logo" className="h-16 mb-4" />
+            <img src={logo} loading='lazy' alt="FiNIT Logo" className="h-16 mb-4" />
             <p className="mb-4">FiNIT - The Finance Society</p>
             <div className="flex space-x-4">
               {socialMediaLinks.map((social, index) => (

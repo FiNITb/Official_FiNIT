@@ -9,7 +9,7 @@ const Map = () => {
     ManitDepartments: "MANIT Departments, Bhopal",
     ManitSports: "MANIT Sports Complex, Bhopal",
   });
-  const [selectedLocation, setSelectedLocation] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("MANIT Main Building, Bhopal");
   const [lat, setLat] = useState(null);
   const [lon, setLon] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -36,6 +36,14 @@ const Map = () => {
       console.error("Error fetching location:", error);
     }
   };
+
+  // Set default location on component mount
+  useEffect(() => {
+    // Set default location to MANIT Main Building
+    const defaultLocation = "MANIT Main Building, Bhopal";
+    setSelectedLocation(defaultLocation);
+    fetchMapAddress(defaultLocation);
+  }, []);
 
   // Handle location change with `useEffect`
   useEffect(() => {
@@ -124,7 +132,7 @@ const Map = () => {
           {lat && lon ? (
             <MapComponent lat={lat} lon={lon} />
           ) : (
-            <p className="text-center mt-10">Select a location to view the map</p>
+            <p className="text-center mt-10">Loading map...</p>
           )}
         </main>
       </div>

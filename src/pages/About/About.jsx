@@ -63,7 +63,7 @@ const About = () => {
           className="about-section mt-5 gap-5"
         >
           <div className="about-image" ref={(el) => (imageRefs.current[0] = el)}>
-            <img src={ab_img1} alt="About Us" />
+            <img src={ab_img1} loading="lazy" alt="About Us" />
           </div>
           <div className="about-text flex flex-col justify-center" ref={(el) => (textRefs.current[0] = el)}>
             <h2 className="about-subheading">Our Vision</h2>
@@ -86,7 +86,7 @@ const About = () => {
           className="about-section gap-5"
         >
           <div className="about-image" ref={(el) => (imageRefs.current[1] = el)}>
-            <img src={ab_img2} alt="About Us" />
+            <img src={ab_img2} loading="lazy" alt="About Us" />
           </div>
           <div className="about-text flex flex-col justify-center" ref={(el) => (textRefs.current[1] = el)}>
             <h2 className="about-subheading">Our Mission</h2>

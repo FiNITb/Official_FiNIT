@@ -57,6 +57,7 @@ const Sponsors = () => {
           >
             <img
               src={sponsor.image}
+              loading="lazy"
               alt={sponsor.name}
               className="w-full h-48 object-contain mb-4 rounded-lg mix-blend-multiply"
             />

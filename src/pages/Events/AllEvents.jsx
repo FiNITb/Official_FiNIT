@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { AllEventData } from "../../Features/AllEvents"; 
-import EventCard from "../../components/EventCard/EventCard"; 
+import EventCard from "../../Components/EventCard/EventCard"; 
 
 const AllEvents = () => {
   const { title } = useParams(); 

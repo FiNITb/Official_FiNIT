@@ -30,7 +30,7 @@ export const AllEventData = {
 </div>
 `,
       image:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741296995/IMG20241019113654_xlb9ho.jpg",
+        "https://res.cloudinary.com/dju84uvhd/image/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/v1741296995/IMG20241019113654_xlb9ho.jpg",
       poweredBy: "",
     },
     {
@@ -46,7 +46,7 @@ export const AllEventData = {
 </div>
 `,
       image:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741296997/IMG20241019120909_p6g3ro.jpg",
+        "https://res.cloudinary.com/dju84uvhd/image/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/v1741296997/IMG20241019120909_p6g3ro.jpg",
       poweredBy: "",
     },
     {
@@ -64,7 +64,7 @@ export const AllEventData = {
 </div>
 `,
       image:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741297642/IMG-20241020-WA0040_bds49x.jpg",
+        "https://res.cloudinary.com/dju84uvhd/image/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/v1741297642/IMG-20241020-WA0040_bds49x.jpg",
       poweredBy: "",
     },
     {
@@ -82,7 +82,7 @@ export const AllEventData = {
 </div>
 `,
       image:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741296995/IMG20241019114502_axoxwh.jpg",
+        "https://res.cloudinary.com/dju84uvhd/image/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/v1741296995/IMG20241019114502_axoxwh.jpg",
       poweredBy: "",
     },
     {
@@ -100,7 +100,7 @@ export const AllEventData = {
 </div>
 `,
       image:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741296995/IMG20241019120359_tjmzzu.jpg",
+        "https://res.cloudinary.com/dju84uvhd/image/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/v1741296995/IMG20241019120359_tjmzzu.jpg",
       poweredBy: "",
     },
   ],
@@ -134,7 +134,7 @@ export const AllEventData = {
     <p><strong>FiNIT continues to inspire financial literacy through engaging events!</strong></p>
 </div>
 `,
-      image: "https://res.cloudinary.com/dju84uvhd/image/upload/v1741340667/DSC_0074_atm3tk.jpg",
+      image: "https://res.cloudinary.com/dju84uvhd/image/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/v1741340667/DSC_0074_atm3tk.jpg",
       poweredBy: "",
     },
     {
@@ -183,7 +183,7 @@ export const AllEventData = {
     </p>
 </div>
 `,
-      image: "https://res.cloudinary.com/dju84uvhd/image/upload/v1741341281/WhatsApp_Image_2025-03-07_at_15.24.28_b0889149_m7eib7.jpg",
+      image: "https://res.cloudinary.com/dju84uvhd/image/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/v1741341281/WhatsApp_Image_2025-03-07_at_15.24.28_b0889149_m7eib7.jpg",
       poweredBy: "",
     },
     {
@@ -220,7 +220,7 @@ export const AllEventData = {
     <p><strong>FiNIT remains committed to fostering financial literacy and smart investing!</strong></p>
 </div>
 `,
-      image: "https://res.cloudinary.com/dju84uvhd/image/upload/v1741341577/DSC_0103_mp7oim.jpg",
+      image: "https://res.cloudinary.com/dju84uvhd/image/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/v1741341577/DSC_0103_mp7oim.jpg",
       poweredBy: "",
     },
     {
@@ -270,7 +270,7 @@ export const AllEventData = {
 </div>
 
 `,
-      image: "https://res.cloudinary.com/dju84uvhd/image/upload/v1741342018/WhatsApp_Image_2025-03-07_at_15.36.39_a6f5fe0c_cjpivw.jpg",
+      image: "https://res.cloudinary.com/dju84uvhd/image/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/v1741342018/WhatsApp_Image_2025-03-07_at_15.36.39_a6f5fe0c_cjpivw.jpg",
       poweredBy: "",
     },
     {
@@ -303,7 +303,7 @@ export const AllEventData = {
     <p><strong>Stay tuned for more exciting finance-centric events from Team FiNIT!</strong></p>
 </div>
 `,
-      image: "https://res.cloudinary.com/dju84uvhd/image/upload/v1741342189/WhatsApp_Image_2025-03-02_at_23.15.09_647550d4_us8aju.jpg",
+      image: "https://res.cloudinary.com/dju84uvhd/image/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/v1741342189/WhatsApp_Image_2025-03-02_at_23.15.09_647550d4_us8aju.jpg",
       poweredBy: "",
     },
   ],

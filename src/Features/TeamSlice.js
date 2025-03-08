@@ -197,7 +197,7 @@ export const TeamDetails = {
       email: "prakhardubey110@gmail.com",
       instagram: "https://www.instagram.com/prakhar_110",
       profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741437166/IMG-20250102-WA0005_-_Nikhil_Paras_pjmvvi.jpg",
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741437093/IMG20241208154904_-_Prakhar_Dubey_p5ochh.jpg",
     },
     {
       id: uuidv4(),

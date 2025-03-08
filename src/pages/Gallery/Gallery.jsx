@@ -46,16 +46,16 @@ function CarouselGames() {
                 extensions={{ AutoScroll }}
             >
                 <SplideSlide>
-                    <img src={img1} alt="Gallery Image 1" className="w-full h-full rounded-lg object-cover" />
+                    <img src={img1} loading='lazy' alt="Gallery Image 1" className="w-full h-full rounded-lg object-cover" />
                 </SplideSlide>
                 <SplideSlide>
-                    <img src={img2} alt="Gallery Image 2" className="w-full h-full rounded-lg object-cover" />
+                    <img src={img2} loading='lazy' alt="Gallery Image 2" className="w-full h-full rounded-lg object-cover" />
                 </SplideSlide>
                 <SplideSlide>
-                    <img src={img3} alt="Gallery Image 3" className="w-full h-full rounded-lg object-cover" />
+                    <img src={img3} loading='lazy' alt="Gallery Image 3" className="w-full h-full rounded-lg object-cover" />
                 </SplideSlide>
                 <SplideSlide>
-                    <img src={img4} alt="Gallery Image 3" className="w-full h-full rounded-lg object-cover" />
+                    <img src={img4} loading='lazy' alt="Gallery Image 3" className="w-full h-full rounded-lg object-cover" />
                 </SplideSlide>
             </Splide>
         </section>

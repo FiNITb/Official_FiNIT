@@ -131,6 +131,7 @@ const onButtonLeave = () => {
       <img
         ref={sideImgRef}
         src={side}
+        loading="lazy"
         alt="Side Design"
         className="fixed max-w-[200px] md:max-w-[300px]"
       />
@@ -217,6 +218,7 @@ const onButtonLeave = () => {
             <img
               ref={heroImgRef}
               src={heroImg}
+              loading="lazy"
               alt="Crypto Illustration"
               className="relative max-w-full sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] h-auto"
             />

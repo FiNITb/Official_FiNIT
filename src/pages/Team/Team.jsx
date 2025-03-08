@@ -4,6 +4,52 @@ import { TeamDetails } from "../../Features/TeamSlice";
 import { FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 import gsap from "gsap";
 
+// Optimized Cloudinary Image Component
+const OptimizedImage = ({ src, alt, className }) => {
+  // Check if it's a Cloudinary URL
+  if (src && src.includes('cloudinary.com')) {
+    // Extract the base URL and any existing transformations
+    const urlParts = src.split('/upload/');
+    
+    if (urlParts.length === 2) {
+      // Add transformation parameters for progressive loading and optimization
+      const baseUrl = urlParts[0];
+      const imageDetails = urlParts[1];
+      
+      // Add optimizations:
+      // c_fill,g_face - intelligent cropping for face recognition
+      // w_300 - set appropriate width (adjust as needed)
+      // f_auto - automatic format selection (WebP/AVIF for supported browsers)
+      // q_auto - automatic quality optimization
+      // fl_progressive - enables progressive loading (appears gradually instead of top-to-bottom)
+      const optimizedUrl = `${baseUrl}/upload/c_fill,g_face,f_auto,q_auto,fl_progressive/${imageDetails}`;
+      
+      return (
+        <img
+          src={optimizedUrl}
+          loading="lazy"
+          alt={alt}
+          className={className}
+          onError={(e) => {
+            // Fallback to original URL if transformation fails
+            e.target.src = src;
+          }}
+        />
+      );
+    }
+  }
+  
+  // Return regular image if not a Cloudinary URL or format doesn't match
+  return (
+    <img
+      src={src}
+      loading="lazy"
+      alt={alt}
+      className={className}
+    />
+  );
+};
+
 const Team = () => {
   const headingRef = useRef(null);
   const secondYearRef = useRef([]);
@@ -27,38 +73,38 @@ const Team = () => {
     );
 
     // Add animation for faculty heading
-  gsap.fromTo(
-    facultyHeadingRef.current,
-    { opacity: 0, y: -50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1.5,
-      ease: 'power3.out',
-    }
-  );
+    gsap.fromTo(
+      facultyHeadingRef.current,
+      { opacity: 0, y: -50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: 'power3.out',
+      }
+    );
 
-  // Add animation for faculty members
-  facultyMembersRef.current.forEach((el) => {
-    if (el) {
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 50, scale: 0.8 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    }
-  });
+    // Add animation for faculty members
+    facultyMembersRef.current.forEach((el) => {
+      if (el) {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 50, scale: 0.8 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      }
+    });
     // Animation for the third-year heading
     gsap.fromTo(
       thirdYearHeadingRef.current,
@@ -139,7 +185,7 @@ const Team = () => {
             >
               <div className="overlay"></div>
               <div className="circle">
-                <img
+                <OptimizedImage
                   src={member.profileImage}
                   alt={member.name}
                   className="team-photo"
@@ -157,7 +203,6 @@ const Team = () => {
                 >
                   <FaLinkedin />
                 </a>
-                {/* <a href={member.instagram} target="_blank" rel="noopener noreferrer"><FaInstagram /></a> */}
                 <a
                   href={member.email}
                   target="_blank"
@@ -188,7 +233,7 @@ const Team = () => {
             >
               <div className="overlay"></div>
               <div className="circle">
-                <img
+                <OptimizedImage
                   src={member.profileImage}
                   alt={member.name}
                   className="team-photo"
@@ -236,7 +281,7 @@ const Team = () => {
             >
               <div className="overlay"></div>
               <div className="circle">
-                <img
+                <OptimizedImage
                   src={member.profileImage}
                   alt={member.name}
                   className="team-photo"
