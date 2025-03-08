@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import './Team.css';
 import { TeamDetails } from '../../Features/TeamSlice';
-import { FaLinkedin, FaInstagram } from 'react-icons/fa';  
+import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';  
 import gsap from 'gsap';
 
 const Team = () => {
@@ -83,6 +83,35 @@ const Team = () => {
     <div className="team-container bg-gradient-to-r from-purple-950 to-black overflow-hidden">
       {/* Main Heading */}
       <h1 ref={headingRef} className="team-heading">Meet Our Team</h1>
+
+      {/* Third Year Section (Placed Above Second Year) */}
+      <section className="third-year-section py-20">
+          <h1 ref={thirdYearHeadingRef} className="section-heading text-5xl pb-10 text-whitey font-semibold">Faculty Co-ordinators</h1>
+          <div className="team-grid mt-6 px-36 justify-center md:justify-start">
+            {TeamDetails.facultyCoordinator.map((member, index) => (
+          <div
+            key={member.id}
+            className="card team-member"
+            ref={(el) => (thirdYearRef.current[index] = el)}
+          >
+            <div className="overlay"></div> 
+            <div className="circle">  	  
+              <img src={member.profileImage} alt={member.name} className="team-photo" />
+            </div>
+            <h2 className="team-name">{member.name}</h2>
+            <p className="team-position">{member.role}</p>
+
+            {/* Social Media Icons */}
+              <div className="social-icons">
+                <a href={member.linkedIn} target='_blank' rel='noopener noreferrer'><FaLinkedin /></a>
+                {/* <a href={member.instagram} target="_blank" rel="noopener noreferrer"><FaInstagram /></a> */}
+                <a href={member.email} target="_blank" rel="noopener noreferrer"><FaEnvelope /></a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
 
       {/* Third Year Section (Placed Above Second Year) */}
         <section className="third-year-section py-20">
