@@ -25,7 +25,7 @@ export const TeamDetails = {
       email: "anujgour0124@gmail.com",
       instagram: "https://www.instagram.com/anujgour_27/profilec",
       profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660122/pixelcut-export_-_Anuj_Gour_ovbibc.png",
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741455067/WhatsApp_Image_2025-03-08_at_22.48.22_9a44c28b_uwus9h.jpg",
     },
 
     //Social Media Manager
