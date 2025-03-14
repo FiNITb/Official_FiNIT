@@ -28,6 +28,19 @@ export const TeamDetails = {
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741455067/WhatsApp_Image_2025-03-08_at_22.48.22_9a44c28b_uwus9h.jpg",
     },
 
+    {
+      id: uuidv4(),
+      name: "Akash Singh",
+      year: "2nd Year",
+      role: "Graphic Desinger",
+      linkedIn:
+        "https://www.linkedin.com/in/akash-singh-23550828a",
+      email: "",
+      instagram: "https://www.instagram.com/akash.singh1275",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741968367/WhatsApp_Image_2025-03-14_at_20.56.53_fd070573_wedsvn.jpg",
+    },
+
     //Social Media Manager
     {
       id: uuidv4(),
@@ -73,9 +86,20 @@ export const TeamDetails = {
       role: "Event Manager",
       linkedIn: "https://www.linkedin.com/in/gauryuvraj",
       email: "",
-      instagram: "https://www.instagram.com/yuvrajsinghgaur",
+      instagram: "https://www.instagram.com/_yuvrajsinghgaur_",
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1740831954/WhatsApp_Image_2025-03-01_at_17.51.05_182c6683_kytudf.jpg",
+    },
+    {
+      id: uuidv4(),
+      name: "Shivesh Meena",
+      year: "2nd Year",
+      role: "Event Manager",
+      linkedIn: "https://www.linkedin.com/in/shivesh-meena-9667b9280",
+      email: "",
+      instagram: "https://www.instagram.com/_shivesh_",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741968872/WhatsApp_Image_2025-03-04_at_17.22.45_6e7cb23c_hglzz6.jpg",
     },
     {
       id: uuidv4(),
@@ -134,19 +158,19 @@ export const TeamDetails = {
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660118/1708271881166_-_Ankit_Singh_gshwzb.jpg",
     },
-    {
-      id: uuidv4(),
-      name: "Anchal Verma",
-      year: "2nd Year",
-      role: "Event Manager",
-      linkedIn:
-        "https://www.linkedin.com/in/anchal-verma-4b5716341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      email: "verma20.09.aashi@gmail.com",
-      instagram:
-        "https://www.instagram.com/__aashi__20?igsh=MWhwaXp3YzAzZDRvaQ==",
-      profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660119/aaroha_-_Anchal_Verma_k8lprv.jpg",
-    },
+    // {
+    //   id: uuidv4(),
+    //   name: "Anchal Verma",
+    //   year: "2nd Year",
+    //   role: "Event Manager",
+    //   linkedIn:
+    //     "https://www.linkedin.com/in/anchal-verma-4b5716341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    //   email: "verma20.09.aashi@gmail.com",
+    //   instagram:
+    //     "https://www.instagram.com/__aashi__20?igsh=MWhwaXp3YzAzZDRvaQ==",
+    //   profileImage:
+    //     "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660119/aaroha_-_Anchal_Verma_k8lprv.jpg",
+    // },
     {
       id: uuidv4(),
       name: "Ayush Meena",
@@ -239,16 +263,27 @@ export const TeamDetails = {
     
     
     // Photographer
+    // {
+    //   id: uuidv4(),
+    //   name: "Vaibhav Mandwar",
+    //   year: "2nd Year",
+    //   role: "Photographer",
+    //   linkedIn: "https://www.linkedin.com/in/Vaibhav Mandwar",
+    //   email: "vaibhavmb97@gmail.com",
+    //   instagram: "https://www.instagram.com/waybhav_07",
+    //   profileImage:
+    //     "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660123/IMG_2299_-_Vaibhav_M_vianuc.jpg",
+    // },
     {
       id: uuidv4(),
-      name: "Vaibhav Mandwar",
+      name: "Harsh Shah",
       year: "2nd Year",
       role: "Photographer",
-      linkedIn: "https://www.linkedin.com/in/Vaibhav Mandwar",
-      email: "vaibhavmb97@gmail.com",
-      instagram: "https://www.instagram.com/waybhav_07",
+      linkedIn: "https://www.linkedin.com/in/harsh-shah-1259b9283",
+      email: "",
+      instagram: "https://www.instagram.com/hrrshah",
       profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660123/IMG_2299_-_Vaibhav_M_vianuc.jpg",
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741967873/WhatsApp_Image_2025-03-09_at_11.29.09_8bd0d9dd_rjn5ql.jpg",
     },
   ],
   thirdYear: [
@@ -292,7 +327,7 @@ export const TeamDetails = {
       name: "Shriyansh Chourasiya",
       year: "3rd Year",
       role: "Co-coordinator (Admin)",
-      linkedIn: "https://www.linkedin.com/in/shriyansh-chourasiya",
+      linkedIn: "https://www.linkedin.com/in/shriyansh-chourasiya-752821288",
       email: "shriyanshchourasiya96@gmail.com",
       instagram: "https://www.instagram.com/ll_mr.unpredictable_",
       profileImage:
@@ -309,22 +344,33 @@ export const TeamDetails = {
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1739281135/Karan_FiNIT_lkotka.jpg",
     },
+    // {
+    //   id: uuidv4(),
+    //   name: "Prachi Agarwal",
+    //   year: "3rd Year",
+    //   role: "General Secretary",
+    //   linkedIn: "https://www.linkedin.com/in/prachi-agarwal-158bbb24b",
+    //   email: "agarwalprachi026@gmail.com",
+    //   instagram: "https://www.instagram.com/ag_prachi_",
+    //   profileImage:
+    //     "https://res.cloudinary.com/dju84uvhd/image/upload/v1741433391/IMG-20250118-WA0049_-_Prachi_Agarwal_mtycv1.jpg",
+    // },
     {
       id: uuidv4(),
-      name: "Prachi Agarwal",
+      name: "Sanya Khandelwal",
       year: "3rd Year",
       role: "General Secretary",
-      linkedIn: "https://www.linkedin.com/in/prachi-agarwal-158bbb24b",
-      email: "agarwalprachi026@gmail.com",
-      instagram: "https://www.instagram.com/ag_prachi_",
+      linkedIn: "https://www.linkedin.com/in/sanya-khandelwal-059637289",
+      email: "",
+      instagram: "https://www.instagram.com/sanyakhandelwal2021",
       profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741433391/IMG-20250118-WA0049_-_Prachi_Agarwal_mtycv1.jpg",
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741965403/WhatsApp_Image_2025-03-09_at_02.08.10_34c03938_wum2hc_4df15b.jpg",
     },
     {
       id: uuidv4(),
       name: "Pragati Singh",
       year: "3rd Year",
-      role: "Event Management Head",
+      role: " Head of Event Management",
       linkedIn: "https://www.linkedin.com/in/pragati-singh-520888250",
       email: "singhpragati041@gmail.com",
       instagram: "https://www.instagram.com/_sinpragati_",
@@ -335,7 +381,7 @@ export const TeamDetails = {
       id: uuidv4(),
       name: "Rishabh Patel",
       year: "3rd Year",
-      role: "Operational Head",
+      role: "Head of operations",
       linkedIn: "https://www.linkedin.com/in/rishabh-patel-27bb",
       email: "rishabh558patel@gmail.com",
       instagram: "https://www.instagram.com/risheclipse",
@@ -346,7 +392,7 @@ export const TeamDetails = {
       id: uuidv4(),
       name: "Arman Pal",
       year: "3rd Year",
-      role: "Web Development Head",
+      role: "Head of Web Development",
       linkedIn: "https://www.linkedin.com/in/arman-pal-867871252",
       email: "armanpal272005@gmail.com",
       instagram: "https://www.instagram.com/",
@@ -357,7 +403,7 @@ export const TeamDetails = {
       id: uuidv4(),
       name: "Dileep Bhargav",
       year: "3rd Year",
-      role: "Fintech Head",
+      role: "Head of Fintech",
       linkedIn: "https://www.linkedin.com/in/dileep-bhargav89/",
       email: "dileepbhargav722@gmail.com",
       instagram:
@@ -369,7 +415,7 @@ export const TeamDetails = {
       id: uuidv4(),
       name: "Varun Jain",
       year: "3rd Year",
-      role: "Fintech Head",
+      role: "Head of Fintech",
       linkedIn: "https://www.linkedin.com/in/varun-jain08",
       email: "varunvj8804@gmail.com",
       instagram: "https://www.instagram.com/varun.8_8",
@@ -380,7 +426,7 @@ export const TeamDetails = {
       id: uuidv4(),
       name: "Shreyas Raut",
       year: "3rd Year",
-      role: "Promotion and outreach head",
+      role: "Head of Promotion and outreach",
       linkedIn:
         "https://www.linkedin.com/in/shreyas-raut-643a9a256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       email: "shreyas.raut04@gmail.com",
@@ -393,7 +439,7 @@ export const TeamDetails = {
       id: uuidv4(),
       name: "Vedant Kumar Namdev",
       year: "3rd Year",
-      role: "Content and Designing Head",
+      role: "Head of Content and Designing",
       linkedIn: "https://www.linkedin.com/in/vedant-kumar-namdev-31228a257",
       email: "",
       instagram:
@@ -405,7 +451,7 @@ export const TeamDetails = {
       id: uuidv4(),
       name: "Aditya Singh",
       year: "3rd Year",
-      role: "Technical Head",
+      role: "Head of Technical Operations",
       linkedIn:
         "https://www.linkedin.com/in/aditya-singh-b788a5343?trk=contact-info",
       email: "ad6425691@gmail.com",

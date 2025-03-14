@@ -176,7 +176,7 @@ const onButtonLeave = () => {
               onMouseLeave={onButtonLeave}
             >
               <a
-                href="https://drive.google.com/file/d/159i3b8A5cAjXDjd-s07HZ0K4pJ3QQf1W/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ex-JW-fMSCX_SN44HeI3zBB06fQzljM-/view?usp=sharing"
                 download="FiNIT_Brochure.pdf"
                 className="px-4 py-2 sm:px-5 sm:py-2.5 bg-teal-500 text-white rounded-full font-medium text-sm sm:text-base transition-all duration-300 hover:bg-teal-400 hover:shadow-md inline-flex items-center gap-1.5"
                 target="_blank"
