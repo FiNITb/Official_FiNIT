@@ -28,18 +28,6 @@ export const TeamDetails = {
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741455067/WhatsApp_Image_2025-03-08_at_22.48.22_9a44c28b_uwus9h.jpg",
     },
 
-    {
-      id: uuidv4(),
-      name: "Akash Singh",
-      year: "2nd Year",
-      role: "Graphic Desinger",
-      linkedIn:
-        "https://www.linkedin.com/in/akash-singh-23550828a",
-      email: "",
-      instagram: "https://www.instagram.com/akash.singh1275",
-      profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741968367/WhatsApp_Image_2025-03-14_at_20.56.53_fd070573_wedsvn.jpg",
-    },
 
     //Social Media Manager
     {
@@ -259,6 +247,18 @@ export const TeamDetails = {
       instagram: "https://www.instagram.com/rohan.kr_3",
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660119/IMG-20241108-WA0005_1_-_Rohan_Kumar_d64q24.jpg",
+    },
+    {
+      id: uuidv4(),
+      name: "Akash Singh",
+      year: "2nd Year",
+      role: "Graphic Desinger",
+      linkedIn:
+        "https://www.linkedin.com/in/akash-singh-23550828a",
+      email: "",
+      instagram: "https://www.instagram.com/akash.singh1275",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741968367/WhatsApp_Image_2025-03-14_at_20.56.53_fd070573_wedsvn.jpg",
     },
     
     
