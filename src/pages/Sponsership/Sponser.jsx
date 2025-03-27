@@ -10,12 +10,12 @@ import stockgro from "../../assets/stockgro.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const sponsors = [
+const sponsors = [{ name: "SBI", image: sbi }];
+const partners = [
   { name: "Arth Nirmati", image: arthNirmati },
   { name: "Choice Finx", image: choiceFinx },
   { name: "Zerodha", image: zerodha },
   { name: "Unstop", image: unstop },
-  { name: "SBI", image: sbi },
   { name: "Stockgro", image: stockgro },
 ];
 
@@ -48,20 +48,45 @@ const Sponsors = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-black to-purple-700 flex flex-col items-center p-10">
       <h1 className="text-6xl font-bold mb-8 text-[#00FFCC]">Our Sponsors</h1>
+      <div className="flex justify-center w-full max-w-5xl mb-16">
+        <div className="flex gap-8 flex-wrap justify-center">
+          {sponsors.map((sponsor, index) => (
+            <div
+              key={index}
+              ref={(el) => (cardRefs.current[index] = el)}
+              className="bg-white p-6 shadow-lg rounded-2xl flex flex-col items-center opacity-0"
+            >
+              <img
+                src={sponsor.image}
+                loading="lazy"
+                alt={sponsor.name}
+                className="w-full h-48 object-contain mb-4 rounded-lg mix-blend-multiply"
+              />
+              <h2 style={{ fontFamily: 'fh1' }} className="text-xl font-semibold text-black">
+                {sponsor.name}
+              </h2>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <h1 className="text-6xl font-bold mb-8 text-[#00FFCC]">Our Partners</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-5xl">
-        {sponsors.map((sponsor, index) => (
+        {partners.map((partner, index) => (
           <div
-            key={index}
-            ref={(el) => (cardRefs.current[index] = el)}
+            key={index + sponsors.length}
+            ref={(el) => (cardRefs.current[index + sponsors.length] = el)}
             className="bg-white p-6 shadow-lg rounded-2xl flex flex-col items-center opacity-0"
           >
             <img
-              src={sponsor.image}
+              src={partner.image}
               loading="lazy"
-              alt={sponsor.name}
+              alt={partner.name}
               className="w-full h-48 object-contain mb-4 rounded-lg mix-blend-multiply"
             />
-            <h2 style={{fontFamily:'fh1'}} className="text-xl font-semibold text-black">{sponsor.name}</h2>
+            <h2 style={{ fontFamily: 'fh1' }} className="text-xl font-semibold text-black">
+              {partner.name}
+            </h2>
           </div>
         ))}
       </div>

@@ -13,9 +13,9 @@ const Home_Layout = () => {
     <About/>
     <Events/>
     <Gallery/>
-    <Map/>
     <Sponsors/>
     <Forms/>
+    <Map/>
     </>
   )
 }

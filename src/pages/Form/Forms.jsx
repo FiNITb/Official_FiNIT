@@ -54,7 +54,7 @@ const Forms = () => {
   };
 
   return (
-    <div className="min-h-screen relative py-28 flex flex-col items-center justify-center bg-gradient-to-br from-gray-800 to-black p-6">
+    <div className="min-h-screen relative py-28 flex flex-col items-center justify-center bg-gradient-to-br from-purple-950 to-black p-6">
       {/* Heading */}
       <h2
         style={{ fontFamily: "fh1" }}
