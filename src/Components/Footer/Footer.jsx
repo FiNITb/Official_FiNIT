@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for routing
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaYoutube, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import logo from '../../assets/FiNIT_Logo.jpg';
 
 // Data for links, social media, and contact
 const socialMediaLinks = [
-  { icon: <FaFacebookF size={24} />, url: "#" },
-  { icon: <FaTwitter size={24} />, url: "#" },
+  { icon: <FaYoutube size={24} />, url: "https://youtube.com/@finitnitbhopal" },
+  { icon: <FaXTwitter size={24} />, url: "https://x.com/finit_nitb" },
   { icon: <FaLinkedinIn size={24} />, url: "https://www.linkedin.com/company/finit-nit-bhopal" },
   { icon: <FaInstagram size={24} />, url: "https://www.instagram.com/finit_nitb/" },
 ];

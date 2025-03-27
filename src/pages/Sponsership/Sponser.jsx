@@ -46,7 +46,7 @@ const Sponsors = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-black to-purple-700 flex flex-col items-center p-10">
+    <div className="min-h-screen bg-gradient-to-r from-purple-950 to-black flex flex-col items-center p-10">
       <h1 className="text-6xl font-bold mb-8 text-[#00FFCC]">Our Sponsors</h1>
       <div className="flex justify-center w-full max-w-5xl mb-16">
         <div className="flex gap-8 flex-wrap justify-center">

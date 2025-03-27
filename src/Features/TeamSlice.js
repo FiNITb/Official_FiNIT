@@ -79,13 +79,22 @@ export const TeamDetails = {
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1740831954/WhatsApp_Image_2025-03-01_at_17.51.05_182c6683_kytudf.jpg",
     },
     {
+      name:"Lakshya Gupta",
+      year:"2nd Year",
+      role:"Event Manager",
+      linkedIn:"https://www.linkedin.com/in/lakshyagupta001",
+      email:"guptalakshya001@gmail.com",
+      instagram:"https://www.instagram.com/lakshya.__.gupta",
+      profileImage:"https://res.cloudinary.com/dju84uvhd/image/upload/v1737660120/IMG-20250106-WA0001_-_lakshya_gupta_c0fel3.jpg"
+    },
+    {
       id: uuidv4(),
       name: "Shivesh Meena",
       year: "2nd Year",
       role: "Event Manager",
       linkedIn: "https://www.linkedin.com/in/shivesh-meena-9667b9280",
       email: "",
-      instagram: "https://www.instagram.com/_shivesh_",
+      instagram: "https://www.instagram.com/___shivesh___",
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741968872/WhatsApp_Image_2025-03-04_at_17.22.45_6e7cb23c_hglzz6.jpg",
     },
@@ -329,7 +338,7 @@ export const TeamDetails = {
       role: "Co-coordinator (Admin)",
       linkedIn: "https://www.linkedin.com/in/shriyansh-chourasiya-752821288",
       email: "shriyanshchourasiya96@gmail.com",
-      instagram: "https://www.instagram.com/ll_mr.unpredictable_",
+      instagram: "https://www.instagram.com/ll_mr.unpredictable_ll",
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660481/Taj_photo_-_Shriyansh_Chourasiya_fm8e2a.jpg",
     },
@@ -344,22 +353,22 @@ export const TeamDetails = {
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1739281135/Karan_FiNIT_lkotka.jpg",
     },
-    // {
-    //   id: uuidv4(),
-    //   name: "Prachi Agarwal",
-    //   year: "3rd Year",
-    //   role: "General Secretary",
-    //   linkedIn: "https://www.linkedin.com/in/prachi-agarwal-158bbb24b",
-    //   email: "agarwalprachi026@gmail.com",
-    //   instagram: "https://www.instagram.com/ag_prachi_",
-    //   profileImage:
-    //     "https://res.cloudinary.com/dju84uvhd/image/upload/v1741433391/IMG-20250118-WA0049_-_Prachi_Agarwal_mtycv1.jpg",
-    // },
+    {
+      id: uuidv4(),
+      name: "Prachi Agarwal",
+      year: "3rd Year",
+      role: "General Secretary",
+      linkedIn: "https://www.linkedin.com/in/prachi-agarwal-158bbb24b",
+      email: "agarwalprachi026@gmail.com",
+      instagram: "https://www.instagram.com/ag_prachi_",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741433391/IMG-20250118-WA0049_-_Prachi_Agarwal_mtycv1.jpg",
+    },
     {
       id: uuidv4(),
       name: "Sanya Khandelwal",
       year: "3rd Year",
-      role: "General Secretary",
+      role: "Head of Sponsorship",
       linkedIn: "https://www.linkedin.com/in/sanya-khandelwal-059637289",
       email: "",
       instagram: "https://www.instagram.com/sanyakhandelwal2021",
@@ -376,6 +385,16 @@ export const TeamDetails = {
       instagram: "https://www.instagram.com/_sinpragati_",
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741433391/IMG-20231125-WA0055_-_Pragati_Singh_llhrna.jpg",
+    },
+    {
+      id: uuidv4(),
+      name: "Mayank Suryavanshi ",
+      year: "3rd Year",
+      role: "Treasurer",
+      linkedIn: "https://www.linkedin.com/in/mayank-suryawanshi-136977277",
+      email: "Mayanksuryawanshi97@gmail.com",
+      instagram: "https://www.instagram.com/mayanksuryawansi?igsh=bXB6aWEwaWI3cDRm",
+      profileImage:"https://res.cloudinary.com/dju84uvhd/image/upload/v1743112157/IMG-20250309-WA0011_-_Mayank_Suryawanshi_mel5wm.jpg"
     },
     {
       id: uuidv4(),
@@ -460,6 +479,43 @@ export const TeamDetails = {
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741433392/IMG_20250127_223223_-_Aditya_Singh_i2p0hk.jpg",
     },
+    {
+      id: uuidv4(),
+      name: "Tanya Singh",
+      year: "3rd Year",
+      role: "Head of Research and Development",
+      linkedIn:
+        "",
+      instagram:
+        "",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1743112157/WhatsApp_Image_2025-03-27_at_18.12.43_cc59532f_q7zszw.jpg",
+    },
+    {
+      id: uuidv4(),
+      name: "Kamal Jhorar",
+      year: "3rd Year",
+      role: "Head of Logistics",
+      linkedIn:
+        "",
+      instagram:
+        "",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1743112157/WhatsApp_Image_2025-03-27_at_15.08.45_d2ad3b51_qo7n01.jpg",
+    },
+    {
+      id: uuidv4(),
+      name: "Krishnakant Mehra",
+      year: "3rd Year",
+      role: "Photography Lead",
+      linkedIn:
+        "",
+      instagram:
+        "",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1743112157/jpeg-optimizer_IMG_20231010_201509_1_1_kqlpn1.jpg",
+    },
+    
   ],
 
   facultyCoordinator: [
