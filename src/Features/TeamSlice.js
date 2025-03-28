@@ -344,7 +344,7 @@ export const TeamDetails = {
     },
     {
       id: uuidv4(),
-      name: "KARAN CHOUDHARY",
+      name: "Karan Choudhary",
       year: "3rd Year",
       role: "Co-Coordinator(Management)",
       linkedIn: "https://www.linkedin.com/in/karan-choudhary-8b62a6216",
@@ -388,7 +388,7 @@ export const TeamDetails = {
     },
     {
       id: uuidv4(),
-      name: "Mayank Suryavanshi ",
+      name: "Mayank Suryawanshi ",
       year: "3rd Year",
       role: "Treasurer",
       linkedIn: "https://www.linkedin.com/in/mayank-suryawanshi-136977277",
@@ -434,7 +434,7 @@ export const TeamDetails = {
       id: uuidv4(),
       name: "Varun Jain",
       year: "3rd Year",
-      role: "Head of Fintech",
+      role: "Head of Media",
       linkedIn: "https://www.linkedin.com/in/varun-jain08",
       email: "varunvj8804@gmail.com",
       instagram: "https://www.instagram.com/varun.8_8",
