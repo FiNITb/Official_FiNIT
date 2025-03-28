@@ -6,7 +6,7 @@ import logo from '../../assets/FiNIT_Logo.jpg';
 
 // Data for links, social media, and contact
 const socialMediaLinks = [
-  { icon: <FaYoutube size={24} />, url: "https://youtube.com/@finitnitbhopal" },
+  { icon: <FaYoutube size={24} />, url: "https://www.youtube.com/@finit_nitb" },
   { icon: <FaXTwitter size={24} />, url: "https://x.com/finit_nitb" },
   { icon: <FaLinkedinIn size={24} />, url: "https://www.linkedin.com/company/finit-nit-bhopal" },
   { icon: <FaInstagram size={24} />, url: "https://www.instagram.com/finit_nitb/" },

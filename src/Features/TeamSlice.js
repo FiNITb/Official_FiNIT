@@ -66,6 +66,44 @@ export const TeamDetails = {
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660120/IMG-20241221-WA0554_-_harish_kushwaha_pqwdgz.jpg",
     },
 
+    // Content Writer
+    {
+      id: uuidv4(),
+      name: "Twinkle Singh ",
+      year: "2nd Year",
+      role: "Content Writer",
+      linkedIn: "https://www.linkedin.com/in/twinklesingh01",
+      email: "twinklesingh.panwar344@gmail.com",
+      instagram: "https://www.instagram.com/",
+      profileImage:"https://res.cloudinary.com/dju84uvhd/image/upload/v1743142323/IMG_20250328_103950_-_Twinkle_Singh_htqf7h.jpg"
+    },
+
+    // Designer
+    {
+      id: uuidv4(),
+      name: "Akash Singh",
+      year: "2nd Year",
+      role: "Graphic Desinger",
+      linkedIn:
+        "https://www.linkedin.com/in/akash-singh-23550828a",
+      email: "",
+      instagram: "https://www.instagram.com/akash.singh1275",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741968367/WhatsApp_Image_2025-03-14_at_20.56.53_fd070573_wedsvn.jpg",
+    },
+    {
+      id: uuidv4(),
+      name: "Rohan Kumar",
+      year: "2nd Year",
+      role: "Graphic Desinger",
+      linkedIn:
+        "https://wwww.linkedin.com/in/rohan-kumar-80862a301ww.linkedin.com/in/",
+      email: "rohankk370@gmail.com",
+      instagram: "https://www.instagram.com/rohan.kr_3",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660119/IMG-20241108-WA0005_1_-_Rohan_Kumar_d64q24.jpg",
+    },
+
     // Event Managers
     {
       id: uuidv4(),
@@ -244,31 +282,6 @@ export const TeamDetails = {
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741449974/WhatsApp_Image_2025-03-08_at_20.03.53_88fbf4cd_xwqvpn.jpg",
     },
     
-    // Designer
-    {
-      id: uuidv4(),
-      name: "Rohan Kumar",
-      year: "2nd Year",
-      role: "Graphic Desinger",
-      linkedIn:
-        "https://wwww.linkedin.com/in/rohan-kumar-80862a301ww.linkedin.com/in/",
-      email: "rohankk370@gmail.com",
-      instagram: "https://www.instagram.com/rohan.kr_3",
-      profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1737660119/IMG-20241108-WA0005_1_-_Rohan_Kumar_d64q24.jpg",
-    },
-    {
-      id: uuidv4(),
-      name: "Akash Singh",
-      year: "2nd Year",
-      role: "Graphic Desinger",
-      linkedIn:
-        "https://www.linkedin.com/in/akash-singh-23550828a",
-      email: "",
-      instagram: "https://www.instagram.com/akash.singh1275",
-      profileImage:
-        "https://res.cloudinary.com/dju84uvhd/image/upload/v1741968367/WhatsApp_Image_2025-03-14_at_20.56.53_fd070573_wedsvn.jpg",
-    },
     
     
     // Photographer
@@ -294,6 +307,19 @@ export const TeamDetails = {
       profileImage:
         "https://res.cloudinary.com/dju84uvhd/image/upload/v1741967873/WhatsApp_Image_2025-03-09_at_11.29.09_8bd0d9dd_rjn5ql.jpg",
     },
+
+    // video editor
+    {
+      id: uuidv4(),
+      name: "Abhinav Singh Shyam",
+      year: "2nd Year",
+      role: "Video Editor",
+      linkedIn: "https://www.linkedin.com/in/abhinav-singh-shyam-4173a3290",
+      email:"",
+      instagram: "https://www.instagram.com/abhinav_singh118",
+      profileImage:
+        "https://res.cloudinary.com/dju84uvhd/image/upload/v1743141728/WhatsApp_Image_2025-03-09_at_09.40.00_4f07b592_dyrpit.jpg",
+    }
   ],
   thirdYear: [
     {

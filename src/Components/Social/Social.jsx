@@ -4,7 +4,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const SocialLinks = () => {
   const socialMedia = [
-    { id: 1, icon: <FaYoutube />, link: "https://youtube.com/@finitnitbhopal" },
+    { id: 1, icon: <FaYoutube />, link: "https://www.youtube.com/@finit_nitb" },
     { id: 2, icon: <FaSquareXTwitter />, link: "https://x.com/finit_nitb" },
     { id: 3, icon: <FaLinkedin />, link: "https://www.linkedin.com/company/finit-nit-bhopal" },
     { id: 4, icon: <FaInstagram />, link: "https://www.instagram.com/finit_nitb/" },
